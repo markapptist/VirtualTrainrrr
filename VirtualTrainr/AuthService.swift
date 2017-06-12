@@ -12,7 +12,9 @@ import UIKit
 
 typealias Completion = (_ errorMessage: String?, _ data: AnyObject?) -> Void
 
-class AuthService {
+class AuthService: NSObject {
+    var authDelegate: AuthenticateStatus?
+    
     private static let _instance = AuthService()
     
     let app = UIApplication.shared.delegate as! AppDelegate
@@ -22,15 +24,15 @@ class AuthService {
     }
     
     func login(email: String, password: String, onComplete: Completion?) {
-        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
-                if let errCode = FIRAuthErrorCode(rawValue: error!._code) {
+                if let errCode = AuthErrorCode(rawValue: error!._code) {
                     // if user not found error
-                    if errCode == .errorCodeUserNotFound {
+                    if errCode == .userNotFound {
                         
                         // create user if it doesn't exist
-                        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                             if error != nil {
                                 self.handleFirebaseError(error: error! as NSError, onComplete: onComplete)
                             }
@@ -38,31 +40,38 @@ class AuthService {
                                 if user?.uid != nil {
                                     
                                     // save user uid to database
-                                    DataService.instance.createNewUser(uid: user!.uid, email: email)
+                                    if UserDefaults.standard.string(forKey: "Account") == "Seeker" {
+                                        DataService.instance.createUser(uid: user!.uid, email: user!.email!, preferences: .seeker)
+                                    }
+                                    if UserDefaults.standard.string(forKey: "Account") == "Trainer" {
+                                        DataService.instance.createUser(uid: user!.uid, email: user!.email!, preferences: .trainer)
+                                    }
                                     
-                                    FIRAuth.auth()!.signIn(withEmail: email, password: password, completion: { (user, error) in
+                                    Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                                         if error != nil {
                                             print(error!.localizedDescription)
                                         }
                                         else {
-                                            if user?.isEmailVerified == false {
-                                                print("not verified")
-                                                FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
-                                                    if error != nil {
-                                                        print(error?.localizedDescription)
-                                                    }
-                                                    else {
-                                                        // do something now that it is sent
-                                                    }
-                                                })
-                                                
-                                            }
-                                            else {
-                                                let createdUser = User(uid: user!.uid, email: user!.email!)
-                                                print(createdUser.email)
-                                                print("signed in created user")
-                                                onComplete?(nil, user)
-                                            }
+                                            /*
+                                             // email verification
+                                             if user?.isEmailVerified == false {
+                                             print("not verified")
+                                             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                                             if error != nil {
+                                             print(error?.localizedDescription)
+                                             }
+                                             else {
+                                             // do something now that it is sent
+                                             }
+                                             })
+                                             
+                                             }
+                                             else {
+                                             
+                                             }
+                                             */
+                                            self.authDelegate?.login()
+                                            print("signed in created user")
                                         }
                                     })
                                     
@@ -80,27 +89,30 @@ class AuthService {
                 }
             }
             else {
-                if user?.isEmailVerified == false {
-                    print("not verified")
-                    FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
-                        if error != nil {
-                            print(error?.localizedDescription)
-                        }
-                        else {
-                            // do something now that it is sent
-                        }
-                    })
-                }
-                else if (user?.displayName != nil) {
-                    let signedInUser = User(uid: (user?.uid)!, email: (user?.email!)!)
-                    print(signedInUser.uid, signedInUser.email, user?.displayName!)
-                }
-                    
-                else {
-                    let signedInUser = User(uid: (user?.uid)!, email: (user?.email!)!)
-                    print(signedInUser.uid, signedInUser.email, "")
-                }
+                /*
+                 if user?.isEmailVerified == false {
+                 print("not verified")
+                 Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                 if error != nil {
+                 print(error?.localizedDescription)
+                 }
+                 else {
+                 // do something now that it is sent
+                 }
+                 })
+                 }
+                 else if (user?.displayName != nil) {
+                 let signedInUser = User(uid: (user?.uid)!, email: (user?.email!)!, name: nil)
+                 print(signedInUser.uid, signedInUser.email, user?.displayName!)
+                 }
+                 
+                 else {
+                 let signedInUser = User(uid: (user?.uid)!, email: (user?.email!)!, name: nil)
+                 print(signedInUser.uid, signedInUser.email, "")
+                 }
+                 */
                 
+                self.authDelegate?.login()
                 print("signed in")
                 onComplete?(nil, user)
             }
@@ -108,15 +120,15 @@ class AuthService {
     }
     
     func handleFirebaseError(error: Error, onComplete: Completion?) {
-        if let errorCode = FIRAuthErrorCode(rawValue: error._code) {
+        if let errorCode = AuthErrorCode(rawValue: error._code) {
             switch errorCode {
-            case .errorCodeInvalidEmail:
+            case .invalidEmail:
                 onComplete?("Invalid email address", nil)
                 break
-            case .errorCodeWrongPassword:
+            case .wrongPassword:
                 onComplete?("Invalid password", nil)
                 break
-            case .errorCodeEmailAlreadyInUse, .errorCodeAccountExistsWithDifferentCredential:
+            case .emailAlreadyInUse, .accountExistsWithDifferentCredential:
                 onComplete?("Could not create account. Email already in use", nil)
                 break
             default:
@@ -125,42 +137,55 @@ class AuthService {
         }
     }
     
+    func checkSignedIn() -> Bool {
+        if let user = Auth.auth().currentUser {
+            print(user.email!)
+            return true
+        }
+        else {
+            print("no one signed in")
+            return false
+        }
+    }
+    
     func getSignedInUser() -> User {
-        if let user = FIRAuth.auth()?.currentUser {
+        if let user = Auth.auth().currentUser {
             if user.displayName != nil {
-                let signedInUser = User(uid: user.uid, email: user.email!)
+                let signedInUser = User(uid: user.uid, email: user.email!, name: nil)
                 print(signedInUser.uid, signedInUser.email, user.displayName!)
                 return signedInUser
             }
             else {
-                let signedInUser = User(uid: user.uid, email: user.email!)
+                let signedInUser = User(uid: user.uid, email: user.email!, name: nil)
                 print(signedInUser.uid, signedInUser.email, "")
                 return signedInUser
             }
         }
         else {
-            let noUserSignedIn = User(uid: "", email: "")
+            let noUserSignedIn = User(uid: "", email: "", name: nil)
             return noUserSignedIn
         }
     }
     
+    // sign out
     func performSignOut() {
-        try! FIRAuth.auth()!.signOut()
-        userDefaults.set(false, forKey: "userLoggedIn")
+        try! Auth.auth().signOut()
     }
     
+    // password reset
     func passwordReset(email: String) {
-        FIRAuth.auth()?.sendPasswordReset(withEmail: email) { error in
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 self.handleFirebaseError(error: error, onComplete: nil)
             } else {
-                
+                // no error
             }
         }
     }
     
+    // save display name
     func saveDisplay(name: String) {
-        if let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest() {
+        if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest() {
             changeRequest.displayName = name
             changeRequest.commitChanges(completion: { (error) in
                 print(error?.localizedDescription)

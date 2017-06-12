@@ -234,6 +234,15 @@
 		6690F5411E93167E001C4588 /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5381E93167E001C4588 /* GTMOAuth2.framework */; };
 		6690F5421E93167E001C4588 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5391E93167E001C4588 /* GTMSessionFetcher.framework */; };
 		9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB911EEEF468003FE23E /* BaseVC.swift */; };
+		9276DB941EEEF579003FE23E /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB931EEEF579003FE23E /* CallView.swift */; };
+		9276DB961EEEF5C1003FE23E /* CloudFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */; };
+		9276DB981EEEF633003FE23E /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB971EEEF633003FE23E /* DataBase.swift */; };
+		9276DB9A1EEEF9B5003FE23E /* EditPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB991EEEF9B5003FE23E /* EditPreferences.swift */; };
+		9276DB9C1EEEF9E7003FE23E /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */; };
+		9276DB9E1EEEFA99003FE23E /* NewMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9D1EEEFA99003FE23E /* NewMessageVC.swift */; };
+		9276DBA01EEEFAB4003FE23E /* OneToOneCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */; };
+		9276DBA21EEEFAD4003FE23E /* PayPalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */; };
+		9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA31EEF1CB5003FE23E /* StorageService.swift */; };
 		FCDA20F64A2A418D7ED3D72E /* Pods_VirtualTrainr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80704A4918F7B6AB1292470 /* Pods_VirtualTrainr.framework */; };
 /* End PBXBuildFile section */
 
@@ -512,6 +521,15 @@
 		923F7A5D1E8855E800E9E2B4 /* intro_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intro_background.png; path = ../../intro_background.png; sourceTree = "<group>"; };
 		923F7A5F1E8856C800E9E2B4 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = ../../back_icon.png; sourceTree = "<group>"; };
 		9276DB911EEEF468003FE23E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		9276DB931EEEF579003FE23E /* CallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFunctions.swift; sourceTree = "<group>"; };
+		9276DB971EEEF633003FE23E /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		9276DB991EEEF9B5003FE23E /* EditPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPreferences.swift; sourceTree = "<group>"; };
+		9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		9276DB9D1EEEFA99003FE23E /* NewMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageVC.swift; sourceTree = "<group>"; };
+		9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneToOneCall.swift; sourceTree = "<group>"; };
+		9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalVC.swift; sourceTree = "<group>"; };
+		9276DBA31EEF1CB5003FE23E /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A32F65EC1C8EEF0CFA150D37 /* Pods-VirtualTrainrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainrUITests/Pods-VirtualTrainrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6F0313CB69733A9E984FCC /* Pods-VirtualTrainr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainr/Pods-VirtualTrainr.debug.xcconfig"; sourceTree = "<group>"; };
 		CC95F7DD6FBCC0FE07B3507A /* Pods_VirtualTrainrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTrainrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -794,6 +812,7 @@
 		665280CC1E8F1C2F000EE04C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9276DB931EEEF579003FE23E /* CallView.swift */,
 				6610ADE51EDDFC1F0018FBBE /* LaunchScreen.storyboard */,
 				6610ADE71EDDFC1F0018FBBE /* Main.storyboard */,
 			);
@@ -806,6 +825,8 @@
 				666974A51ED8B3EE0036CEE5 /* TrainerSide */,
 				666974741ED8B37C0036CEE5 /* ClientSide */,
 				66696BCF1ED8B2DB0036CEE5 /* MyDashboard.swift */,
+				9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */,
+				9276DB9D1EEEFA99003FE23E /* NewMessageVC.swift */,
 				66696BD01ED8B2DB0036CEE5 /* NavController.swift */,
 				6669746E1ED8B33D0036CEE5 /* PaymentFramework */,
 				666974471ED8B3160036CEE5 /* RegisterProcess */,
@@ -897,6 +918,7 @@
 				6669748B1ED8B3E10036CEE5 /* ClientVC.swift */,
 				6669748C1ED8B3E10036CEE5 /* ProfileSegmentVC.swift */,
 				6669748D1ED8B3E10036CEE5 /* MyFavouritesSegmentVC.swift */,
+				9276DB991EEEF9B5003FE23E /* EditPreferences.swift */,
 				6669748E1ED8B3E10036CEE5 /* TransactionHistorySegmentVC.swift */,
 				6669748F1ED8B3E10036CEE5 /* PaymentSegmentVC.swift */,
 				666974901ED8B3E10036CEE5 /* SettingsSegmentVC.swift */,
@@ -1002,6 +1024,11 @@
 				666974FC1ED8B4760036CEE5 /* AuthService.swift */,
 				666974FD1ED8B4760036CEE5 /* User.swift */,
 				9276DB911EEEF468003FE23E /* BaseVC.swift */,
+				9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */,
+				9276DBA31EEF1CB5003FE23E /* StorageService.swift */,
+				9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */,
+				9276DB971EEEF633003FE23E /* DataBase.swift */,
+				9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */,
 				666974FE1ED8B4760036CEE5 /* DataService.swift */,
 			);
 			name = Model;
@@ -1430,6 +1457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9276DB941EEEF579003FE23E /* CallView.swift in Sources */,
 				667910EF1EDA829B001E686E /* GoogleService-Info.plist in Sources */,
 				668BC1C01EDA6AE300292C02 /* VirtualTrainr-Bridging-Header.h in Sources */,
 				666975CE1ED8EE060036CEE5 /* StripeApplePay-Bridging.h in Sources */,
@@ -1437,6 +1465,7 @@
 				9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */,
 				6669755A1ED8B6EE0036CEE5 /* User.swift in Sources */,
 				6669755B1ED8B6EE0036CEE5 /* DataService.swift in Sources */,
+				9276DB9C1EEEF9E7003FE23E /* LocalNotification.swift in Sources */,
 				6669754D1ED8B6E40036CEE5 /* ItemButton.swift in Sources */,
 				6669754E1ED8B6E40036CEE5 /* ItemButtonBlue.swift in Sources */,
 				6669754F1ED8B6E40036CEE5 /* SelectedItemButton.swift in Sources */,
@@ -1449,6 +1478,7 @@
 				666975561ED8B6E40036CEE5 /* LabelCustomSpacing.swift in Sources */,
 				666975571ED8B6E40036CEE5 /* CustomUISlider.swift in Sources */,
 				666975581ED8B6E40036CEE5 /* MyCalendar.swift in Sources */,
+				9276DB961EEEF5C1003FE23E /* CloudFunctions.swift in Sources */,
 				6669754C1ED8B6600036CEE5 /* ApplePayVC.swift in Sources */,
 				666975391ED8B6530036CEE5 /* RegisterVC.swift in Sources */,
 				6669753A1ED8B6530036CEE5 /* SignUpVC.swift in Sources */,
@@ -1467,6 +1497,8 @@
 				666975471ED8B6530036CEE5 /* RegBirthdateVC.swift in Sources */,
 				666975481ED8B6530036CEE5 /* RegTrainerWhen.swift in Sources */,
 				666975491ED8B6530036CEE5 /* RegKeepNotifiedVC.swift in Sources */,
+				9276DB9E1EEEFA99003FE23E /* NewMessageVC.swift in Sources */,
+				9276DB9A1EEEF9B5003FE23E /* EditPreferences.swift in Sources */,
 				6669754A1ED8B6530036CEE5 /* ErrorHandler.swift in Sources */,
 				6669754B1ED8B6530036CEE5 /* WebViewController.swift in Sources */,
 				666975381ED8B64C0036CEE5 /* InboxVC.swift in Sources */,
@@ -1483,6 +1515,7 @@
 				666975221ED8B63B0036CEE5 /* ClientProfileSegmentVC.swift in Sources */,
 				666975231ED8B63B0036CEE5 /* ClientVC.swift in Sources */,
 				666975241ED8B63B0036CEE5 /* ProfileSegmentVC.swift in Sources */,
+				9276DBA01EEEFAB4003FE23E /* OneToOneCall.swift in Sources */,
 				666975251ED8B63B0036CEE5 /* MyFavouritesSegmentVC.swift in Sources */,
 				666975261ED8B63B0036CEE5 /* TransactionHistorySegmentVC.swift in Sources */,
 				666975271ED8B63B0036CEE5 /* PaymentSegmentVC.swift in Sources */,
@@ -1494,6 +1527,7 @@
 				6610ADF71EDDFE960018FBBE /* AppLanguageVC.swift in Sources */,
 				6669752D1ED8B63B0036CEE5 /* CameraVC.swift in Sources */,
 				6669752E1ED8B63B0036CEE5 /* LanguageCell.swift in Sources */,
+				9276DBA21EEEFAD4003FE23E /* PayPalVC.swift in Sources */,
 				6669751F1ED8B6360036CEE5 /* DiscoverClientVC.swift in Sources */,
 				666975201ED8B6360036CEE5 /* DiscoverClientCell.swift in Sources */,
 				6669751A1ED8B6310036CEE5 /* SchedulingVC.swift in Sources */,
@@ -1508,6 +1542,7 @@
 				666975171ED8B62C0036CEE5 /* TransactionsWithdrawalVC.swift in Sources */,
 				666975181ED8B62C0036CEE5 /* GettingPaidVC.swift in Sources */,
 				666975191ED8B62C0036CEE5 /* SessionsPricingView.swift in Sources */,
+				9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */,
 				666975051ED8B6260036CEE5 /* TrainerProfileVC.swift in Sources */,
 				666975061ED8B6260036CEE5 /* MyTrainersSegmentVC.swift in Sources */,
 				666975071ED8B6260036CEE5 /* TrainerCell.swift in Sources */,
@@ -1516,6 +1551,7 @@
 				6669750A1ED8B6260036CEE5 /* TrainerReviewSegmentVC.swift in Sources */,
 				6669750B1ED8B6260036CEE5 /* TrainerAboutMeSegmentVC.swift in Sources */,
 				6669750C1ED8B6260036CEE5 /* TrainerPackageSegmentVC.swift in Sources */,
+				9276DB981EEEF633003FE23E /* DataBase.swift in Sources */,
 				6669750D1ED8B6260036CEE5 /* TrainerMeetUpVC.swift in Sources */,
 				6669750E1ED8B6260036CEE5 /* TrainerMeetUpLocationVC.swift in Sources */,
 				6669750F1ED8B6260036CEE5 /* TrainerMeetUpDateVC.swift in Sources */,

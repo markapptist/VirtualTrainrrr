@@ -29,29 +29,28 @@ class AppContainerViewController: UIViewController {
     
     let hiddenView = UIView()
     let moreBtn = UIButton()
-  
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-   
+        
+        
         entry.view.frame = self.view.bounds
         self.addChildViewController(entry)
         self.view.addSubview(entry.view)
- /*
-        dashboard.view.frame = self.view.bounds
-        self.addChildViewController(dashboard)
-        self.view.addSubview(dashboard.view)
-   */
+        /*
+         dashboard.view.frame = self.view.bounds
+         self.addChildViewController(dashboard)
+         self.view.addSubview(dashboard.view)
+         */
         blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.showApptDetail(notification:)), name: calendarNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showApplyFitlers(notification:)), name: secondNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.showProfile(notification:)), name: profileNotification, object: nil)
-
+        
         self.makeDetailView().isHidden = true
         blurEffectView.isHidden = true
         
@@ -73,7 +72,7 @@ class AppContainerViewController: UIViewController {
         filterView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1.0).isActive = true
         filterView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         filterView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-
+        
         let topView = UIView()
         filterView.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
@@ -95,7 +94,7 @@ class AppContainerViewController: UIViewController {
         topViewTitle.centerXAnchor.constraint(equalTo: topView.centerXAnchor, constant: 0).isActive = true
         topViewTitle.widthAnchor.constraint(equalTo: topView.widthAnchor, multiplier: 0.6).isActive = true
         topViewTitle.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.8).isActive = true
-
+        
         let closeBtn = UIButton()
         filterView.addSubview(closeBtn)
         closeBtn.setImage(#imageLiteral(resourceName: "cancel_button.png"), for: .normal)
@@ -105,7 +104,7 @@ class AppContainerViewController: UIViewController {
         closeBtn.widthAnchor.constraint(equalToConstant: 30).isActive = true
         closeBtn.heightAnchor.constraint(equalToConstant: 30).isActive = true
         closeBtn.addTarget(self, action: #selector(closeFilterBtnPressed), for: .touchUpInside)
-
+        
         let contentView = UIView()
         filterView.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +131,7 @@ class AppContainerViewController: UIViewController {
         upToLbl.textAlignment = .center
         upToLbl.textColor = UIColor.gray
         upToLbl.text = "Up to:"
-        upToLbl.translatesAutoresizingMaskIntoConstraints = false 
+        upToLbl.translatesAutoresizingMaskIntoConstraints = false
         upToLbl.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.3).isActive = true
         upToLbl.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.05).isActive = true
         upToLbl.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
@@ -147,7 +146,7 @@ class AppContainerViewController: UIViewController {
         let row3 = makeTwoButtonRow(anchor: row2, constant: 15, scrollView: scrollView, itemOneString: "Cardio", itemTwoString: "Strength Training")
         
         let row4 = makeTwoButtonRow(anchor: row3, constant: 15, scrollView: scrollView, itemOneString: "Endurance", itemTwoString: "Weight Loss")
-
+        
         let row5 = makeTwoButtonRow(anchor: row4, constant: 15, scrollView: scrollView, itemOneString: "Nutrition", itemTwoString: "Cross Fit")
         
         let row6 = makeTwoButtonRow(anchor: row5, constant: 15, scrollView: scrollView, itemOneString: "Dance", itemTwoString: "P90X")
@@ -156,20 +155,20 @@ class AppContainerViewController: UIViewController {
         
         let row8 = makeTwoButtonRow(anchor: row7, constant: 15, scrollView: scrollView, itemOneString: "Power Lifting", itemTwoString: "BollyX")
         
-     /*   makeHiddenView(anchor: row8, constant: 15, scrollView: scrollView)
-        
-        scrollView.addSubview(moreBtn)
-        moreBtn.setTitle("More Specialities", for: .normal)
-        moreBtn.titleLabel?.font = UIFont(name: "SFUIText-Light", size: 18)
-        moreBtn.titleLabel?.textColor = UIColor.blue
-        moreBtn.translatesAutoresizingMaskIntoConstraints = false
-        moreBtn.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-        moreBtn.topAnchor.constraint(equalTo: hiddenView.bottomAnchor, constant: 10).isActive = true
-        moreBtn.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.4).isActive = true
-        moreBtn.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.02).isActive = true
-        
-        moreBtn.addTarget(self, action: #selector(moreBtnPressed), for: .touchUpInside)
-     */
+        /*   makeHiddenView(anchor: row8, constant: 15, scrollView: scrollView)
+         
+         scrollView.addSubview(moreBtn)
+         moreBtn.setTitle("More Specialities", for: .normal)
+         moreBtn.titleLabel?.font = UIFont(name: "SFUIText-Light", size: 18)
+         moreBtn.titleLabel?.textColor = UIColor.blue
+         moreBtn.translatesAutoresizingMaskIntoConstraints = false
+         moreBtn.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+         moreBtn.topAnchor.constraint(equalTo: hiddenView.bottomAnchor, constant: 10).isActive = true
+         moreBtn.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.4).isActive = true
+         moreBtn.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.02).isActive = true
+         
+         moreBtn.addTarget(self, action: #selector(moreBtnPressed), for: .touchUpInside)
+         */
         
         let row9 = makeDividers(title: "Times Available", anchor: row8, dividersHidden: false, scrollView: scrollView)
         
@@ -233,7 +232,7 @@ class AppContainerViewController: UIViewController {
         scrollView.addSubview(certifiedSwitch)
         certifiedSwitch.translatesAutoresizingMaskIntoConstraints = false
         certifiedSwitch.onTintColor = UIColor.init(red: 63/255, green: 108/255, blue: 171/255, alpha: 1.0)
-        certifiedSwitch.isOn = true 
+        certifiedSwitch.isOn = true
         certifiedSwitch.centerYAnchor.constraint(equalTo: certifiedLbl.centerYAnchor).isActive = true
         certifiedSwitch.leadingAnchor.constraint(equalTo: certifiedLbl.trailingAnchor, constant: 15).isActive = true
         certifiedSwitch.widthAnchor.constraint(equalTo: certifiedLbl.widthAnchor, multiplier: 0.2).isActive = true
@@ -282,7 +281,6 @@ class AppContainerViewController: UIViewController {
         let row12 = makeTwoButtonRow(anchor: row11, constant: 15, scrollView: hiddenView, itemOneString: "Circuit Training", itemTwoString: "Core Training")
         let row13 = makeTwoButtonRow(anchor: row12, constant: 15, scrollView: hiddenView, itemOneString: "Rehabilitation Training", itemTwoString: "Sport Specific Training")
         let row14 = makeOneButtonRow(anchor: row13, constant: 15, scrollView: hiddenView, itemOneString: "Bootcamp")
-
         
         return hiddenView
         
@@ -292,7 +290,7 @@ class AppContainerViewController: UIViewController {
         
         if(!moreBtn.isSelected) {
             
-            UIView.animate(withDuration: 0.5, animations: { 
+            UIView.animate(withDuration: 0.5, animations: {
                 self.hiddenView.heightAnchor.constraint(equalTo: self.hiddenView.heightAnchor, multiplier: 2.0).isActive = true
             })
             
@@ -309,9 +307,7 @@ class AppContainerViewController: UIViewController {
         }
         
     }
-
     
-
     func makeDetailView() -> UIView {
         detailView.backgroundColor = UIColor.clear
         
@@ -465,7 +461,7 @@ class AppContainerViewController: UIViewController {
         nameLbl.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.02).isActive = true
         nameLbl.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15).isActive = true
         nameLbl.topAnchor.constraint(equalTo: trainerView.bottomAnchor, constant: 20).isActive = true
-
+        
         star1.image = #imageLiteral(resourceName: "full_star")
         star1.contentMode = .scaleAspectFit
         detailView.addSubview(star1)
@@ -538,7 +534,7 @@ class AppContainerViewController: UIViewController {
         addressLbl2.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         addressLbl2.trailingAnchor.constraint(equalTo: detailView.trailingAnchor, constant: -15).isActive = true
         addressLbl2.topAnchor.constraint(equalTo: addressLbl.bottomAnchor, constant: 0).isActive = true
-
+        
         
         let dateTimeView = UIView()
         detailView.addSubview(dateTimeView)
@@ -593,7 +589,7 @@ class AppContainerViewController: UIViewController {
         timeDetailLbl.widthAnchor.constraint(equalTo: detailView.widthAnchor, multiplier: 0.5).isActive = true
         timeDetailLbl.heightAnchor.constraint(equalTo: detailView.heightAnchor, multiplier: 0.1).isActive = true
         timeDetailLbl.leadingAnchor.constraint(equalTo: dateDetailLbl.trailingAnchor, constant: 0).isActive = true
-      
+        
         let timeLbl = UILabel()
         timeLbl.font = UIFont(name: "SFUIText-Light", size: 22)
         timeLbl.textAlignment = .center
@@ -614,7 +610,7 @@ class AppContainerViewController: UIViewController {
         timeLblEditBtn.centerYAnchor.constraint(equalTo: timeLbl.centerYAnchor).isActive = true
         timeLblEditBtn.widthAnchor.constraint(equalToConstant: 20).isActive = true
         timeLblEditBtn.heightAnchor.constraint(equalToConstant: 20).isActive = true
-
+        
         
         return detailView
     }
@@ -637,17 +633,5 @@ class AppContainerViewController: UIViewController {
     func showApplyFitlers(notification: Notification) {
         self.filterView.isHidden = false
     }
-
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

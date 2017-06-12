@@ -25,7 +25,6 @@ class RegNameVC: RegisterVC {
         
         self.pageControl.isHidden = false
         self.titleLbl.text = "What's your name?"
-    
         
         firstNameTxtField.placeholder = "First Name"
         firstNameTxtField.textAlignment = .left
@@ -47,7 +46,6 @@ class RegNameVC: RegisterVC {
         firstNameUnderView.centerXAnchor.constraint(equalTo: self.firstNameTxtField.centerXAnchor).isActive = true
         firstNameUnderView.widthAnchor.constraint(equalTo: self.firstNameTxtField.widthAnchor).isActive = true
         firstNameUnderView.heightAnchor.constraint(equalTo: self.firstNameTxtField.heightAnchor, multiplier: 0.01).isActive = true
-        
         
         lastNameTxtField.placeholder = "Last Name"
         lastNameTxtField.textAlignment = .left
@@ -95,22 +93,21 @@ class RegNameVC: RegisterVC {
         continueLabel.centerYAnchor.constraint(equalTo: continueBtn.centerYAnchor).isActive = true
         continueLabel.widthAnchor.constraint(equalTo: continueBtn.widthAnchor).isActive = true
         continueLabel.heightAnchor.constraint(equalTo: continueBtn.heightAnchor).isActive = true
-
         
         continueBtn.addTarget(self, action: #selector(continueBtnPressed), for: .touchUpInside)
-        
-
     }
     
     func continueBtnPressed() {
-    
         if(!(firstNameTxtField.text?.isEmpty)!) {
             if(!(lastNameTxtField.text?.isEmpty)!) {
+                let firstName = firstNameTxtField.text!
+                let lastName = lastNameTxtField.text!
+                UserDefaults.standard.set("\(firstName)", forKey: "FirstName")
+                UserDefaults.standard.set("\(lastName)", forKey: "LastName")
                 let gender = RegGenderVC()
                 present(gender, animated: true, completion: nil)
             }
         }
-        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
