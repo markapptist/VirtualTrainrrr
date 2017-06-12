@@ -1,0 +1,6 @@
+framework module Pods_VirtualTrainrTests {
+  umbrella header "Pods-VirtualTrainrTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
