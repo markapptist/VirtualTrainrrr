@@ -233,6 +233,7 @@
 		6690F5401E93167E001C4588 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5371E93167E001C4588 /* GoogleToolboxForMac.framework */; };
 		6690F5411E93167E001C4588 /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5381E93167E001C4588 /* GTMOAuth2.framework */; };
 		6690F5421E93167E001C4588 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5391E93167E001C4588 /* GTMSessionFetcher.framework */; };
+		9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB911EEEF468003FE23E /* BaseVC.swift */; };
 		FCDA20F64A2A418D7ED3D72E /* Pods_VirtualTrainr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80704A4918F7B6AB1292470 /* Pods_VirtualTrainr.framework */; };
 /* End PBXBuildFile section */
 
@@ -510,6 +511,7 @@
 		923F7A591E88520B00E9E2B4 /* splash_screen_fill_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_screen_fill_button.png; path = ../../splash_screen_fill_button.png; sourceTree = "<group>"; };
 		923F7A5D1E8855E800E9E2B4 /* intro_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intro_background.png; path = ../../intro_background.png; sourceTree = "<group>"; };
 		923F7A5F1E8856C800E9E2B4 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = ../../back_icon.png; sourceTree = "<group>"; };
+		9276DB911EEEF468003FE23E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		A32F65EC1C8EEF0CFA150D37 /* Pods-VirtualTrainrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainrUITests/Pods-VirtualTrainrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6F0313CB69733A9E984FCC /* Pods-VirtualTrainr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainr/Pods-VirtualTrainr.debug.xcconfig"; sourceTree = "<group>"; };
 		CC95F7DD6FBCC0FE07B3507A /* Pods_VirtualTrainrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTrainrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -999,6 +1001,7 @@
 			children = (
 				666974FC1ED8B4760036CEE5 /* AuthService.swift */,
 				666974FD1ED8B4760036CEE5 /* User.swift */,
+				9276DB911EEEF468003FE23E /* BaseVC.swift */,
 				666974FE1ED8B4760036CEE5 /* DataService.swift */,
 			);
 			name = Model;
@@ -1431,6 +1434,7 @@
 				668BC1C01EDA6AE300292C02 /* VirtualTrainr-Bridging-Header.h in Sources */,
 				666975CE1ED8EE060036CEE5 /* StripeApplePay-Bridging.h in Sources */,
 				666975591ED8B6EE0036CEE5 /* AuthService.swift in Sources */,
+				9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */,
 				6669755A1ED8B6EE0036CEE5 /* User.swift in Sources */,
 				6669755B1ED8B6EE0036CEE5 /* DataService.swift in Sources */,
 				6669754D1ED8B6E40036CEE5 /* ItemButton.swift in Sources */,

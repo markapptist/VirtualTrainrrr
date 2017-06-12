@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB31E62DF803FF697FB3CB6D21B5437E"
-               BuildableName = "Pods_VirtualTrainrTests.framework"
-               BlueprintName = "Pods-VirtualTrainrTests"
+               BlueprintIdentifier = "FC00A2B118650C6C90D34FB24F60280D"
+               BuildableName = "Localize_Swift.framework"
+               BlueprintName = "Localize-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB31E62DF803FF697FB3CB6D21B5437E"
-            BuildableName = "Pods_VirtualTrainrTests.framework"
-            BlueprintName = "Pods-VirtualTrainrTests"
+            BlueprintIdentifier = "FC00A2B118650C6C90D34FB24F60280D"
+            BuildableName = "Localize_Swift.framework"
+            BlueprintName = "Localize-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FC00A2B118650C6C90D34FB24F60280D"
+            BuildableName = "Localize_Swift.framework"
+            BlueprintName = "Localize-Swift"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
