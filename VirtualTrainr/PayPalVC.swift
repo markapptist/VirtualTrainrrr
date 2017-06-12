@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+/*
 class PayPalVC: UIViewController, PayPalPaymentDelegate {
     
     var payPalConfig = PayPalConfiguration()
@@ -108,3 +108,4 @@ class PayPalVC: UIViewController, PayPalPaymentDelegate {
     }
     
 }
+ */

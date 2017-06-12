@@ -56,7 +56,11 @@ PODS:
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - FSCalendar (2.7.8)
+  - GoogleMaps (2.3.0):
+    - GoogleMaps/Maps (= 2.3.0)
   - GoogleMaps/Base (2.3.0)
+  - GoogleMaps/Maps (2.3.0):
+    - GoogleMaps/Base
   - GooglePlaces (2.3.0):
     - GoogleMaps/Base (= 2.3.0)
   - GoogleSignIn (4.0.2):
@@ -94,6 +98,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - FSCalendar
+  - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
   - Localize-Swift (~> 1.7)
@@ -125,6 +130,6 @@ SPEC CHECKSUMS:
   Localize-Swift: 6cabc1087c0e910e77bfa87c2ed3f65c80c0b2df
   Stripe: 1c7aa951a075cced500a919d92b687b35d410705
 
-PODFILE CHECKSUM: 3450c53f68ab9c80ad517bee069fef431a8b792b
+PODFILE CHECKSUM: daa9ef36fe39edd166dda126998ebddc5da66d82
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

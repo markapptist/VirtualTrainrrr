@@ -30,7 +30,7 @@ extension UIView {
         self.layer.cornerRadius = radius
         self.clipsToBounds = true
     }
-  
+    
 }
 
 extension UIImageView {
@@ -43,6 +43,24 @@ extension UIImageView {
 }
 extension UIViewController {
     
+    // activity indicators
+    func showActivityIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func hideActivityIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+    // alert controller
+    func showAlertControllerWith(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // display child view controller
     func displayContentController(content: UIViewController) {
         self.addChildViewController(content)
         content.view.frame = self.view.frame
@@ -50,7 +68,7 @@ extension UIViewController {
         content.didMove(toParentViewController: self)
     }
     
-    
+    // hide child view controller
     func hideContentController(content: UIViewController) {
         content.willMove(toParentViewController: nil)
         content.view.removeFromSuperview()
@@ -97,8 +115,8 @@ extension UIViewController {
             rightLine.isHidden = true
         }
         
-       return centerLbl.bottomAnchor
-   
+        return centerLbl.bottomAnchor
+        
     }
     
     func addSelectionBtnRow(anchor: NSLayoutYAxisAnchor, constant: CGFloat) -> NSLayoutYAxisAnchor {
@@ -143,7 +161,6 @@ extension UIViewController {
         itemBtn2.leadingAnchor.constraint(equalTo: itemBtn1.trailingAnchor, constant: 20).isActive = true
         itemBtn2.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.43).isActive = true
         itemBtn2.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.05).isActive = true
-
         
         return itemBtn1.bottomAnchor
         
@@ -159,11 +176,11 @@ extension UIViewController {
         itemBtn1.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         itemBtn1.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.43).isActive = true
         itemBtn1.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.05).isActive = true
-
+        
         
         return itemBtn1.bottomAnchor
         
     }
     
-
+    
 }

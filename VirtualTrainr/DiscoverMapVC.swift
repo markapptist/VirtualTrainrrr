@@ -7,14 +7,15 @@
 //
 
 import UIKit
-import GoogleMaps
-import GooglePlaces
+//import GoogleMaps
+//import GooglePlaces
 import FirebaseDatabase
+import CoreLocation
 
 // pass current location to here
 
 class DiscoverMapVC: BaseVC {
-    
+
     let pinImage = UIImage(named: "location_ic")
     let sliderImage = UIImage(named: "slider_thumb")
     
@@ -30,8 +31,6 @@ class DiscoverMapVC: BaseVC {
     // model
     var trainerMarkers: [GMSMarker:Trainer]? = [:]
     var currentTrainerMarkers: [GMSMarker:Trainer]? = [:]
-    
-    let currentLocation = CLLocationCoordinate2D(latitude: 43.868298, longitude: -79.288441)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,4 +145,5 @@ extension DiscoverMapVC {
             self.showAlertControllerWith(title: "Error getting online trainers", message: error.localizedDescription)
         }
     }
+ 
 }

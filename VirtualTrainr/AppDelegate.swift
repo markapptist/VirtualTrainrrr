@@ -11,8 +11,8 @@ import Firebase
 import FBSDKCoreKit
 import FacebookCore
 import GoogleSignIn
-import GoogleMaps
-import GooglePlaces
+//import GoogleMaps
+//import GooglePlaces
 import Stripe
 
 let userDefaults = UserDefaults.standard
@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         UserDefaults.standard.set(false, forKey: "googleCheck")
         UserDefaults.standard.set(false, forKey: "linkedInCheck")
 
+        print(UUID.init().hashValue)
         
         let entryScreen = EntryScreen()
         

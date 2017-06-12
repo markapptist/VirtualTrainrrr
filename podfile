@@ -27,6 +27,8 @@ pod 'Firebase/Storage'
 pod ‘FacebookCore’
 pod ‘FacebookLogin’
 pod ‘FacebookShare’
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 pod ‘GoogleSignIn’
 pod 'Stripe'
 pod 'FSCalendar'
