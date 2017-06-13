@@ -11,8 +11,8 @@ import Firebase
 import FBSDKCoreKit
 import FacebookCore
 import GoogleSignIn
-//import GoogleMaps
-//import GooglePlaces
+import GoogleMaps
+import GooglePlaces
 import Stripe
 
 let userDefaults = UserDefaults.standard
@@ -33,11 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GMSPlacesClient.provideAPIKey("AIzaSyCG9tiEX9Kh8EmX3kN-o7IpOOvHm_rBSKM")
         
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
@@ -114,9 +114,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         guard let idToken = user.authentication.idToken else {return}
         guard let accessToken = user.authentication.accessToken else {return}
         
-        let credentials = FIRGoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
         
-        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
+        Auth.auth().signIn(with: credentials, completion: { (user, error) in
             
             if let err = error {
                 print("Failed to create a Firebase User with Google account: ", err)

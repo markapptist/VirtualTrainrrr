@@ -7,8 +7,8 @@
 //
 
 import UIKit
-//import GoogleMaps
-//import GooglePlaces
+import GoogleMaps
+import GooglePlaces
 import FirebaseDatabase
 import CoreLocation
 
@@ -35,15 +35,18 @@ class DiscoverMapVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tabBar = self.tabBarController as? MyDashboard
+        let currentLocation: CLLocationCoordinate2D = (tabBar?.currentLocation)!
+        
         // google map
-        let camera = GMSCameraPosition.camera(withTarget: self.currentLocation, zoom: 13.0)
+        let camera = GMSCameraPosition.camera(withTarget: currentLocation, zoom: 13.0)
         map = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         
         self.view.addSubview(self.map!)
         
         self.myMarker = GMSMarker()
         self.myMarker?.icon = self.pinImage
-        self.myMarker?.position = self.currentLocation
+        self.myMarker?.position = currentLocation
         self.myMarker?.map = self.map
     }
     

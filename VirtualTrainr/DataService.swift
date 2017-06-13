@@ -191,7 +191,7 @@ class DataService: DataBase {
     }
     
     func removeOnlineStatus(uid: String) {
-        self.trainersRef.child(email).removeValue { (err, reference) in
+        self.trainersRef.child(uid).removeValue { (err, reference) in
             if let error = err {
                 print(error.localizedDescription)
                 return

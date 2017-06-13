@@ -51,7 +51,9 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
     var messagesRef: DatabaseReference?
     var notificationsRef: DatabaseReference?
     
+    // core location properties
     var locationManager: CLLocationManager!
+    var currentLocation: CLLocationCoordinate2D?
     
     var currentUser: User {
         return AuthService.instance.getSignedInUser()
@@ -142,6 +144,8 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
         
         let userUID = currentUser.uid
         
+        locationManager.startUpdatingLocation()
+        
         callingRef = DataService.instance.usersRef.child(userUID).child("/Phone/Calling")
         incomingCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Incoming")
         acceptCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Accepted")
@@ -173,8 +177,12 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
             
-            // save to database
-            DataService.instance.updateCoordinates(latitude: latitude, longitude: longitude, email: currentUser.email, accountUID: currentUser.uid)
+            self.currentLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            
+            if currentPortal == "Trainer" {
+                // save to database
+                DataService.instance.updateCoordinates(latitude: latitude, longitude: longitude, email: currentUser.email, accountUID: currentUser.uid)
+            }
         }
     }
     
@@ -204,8 +212,8 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
     }
     
     // MARK: - Database Observers
-    
     func createObservers() {
+        /*
         self.callingRef?.observe(.childAdded, with: { (snapshot) in
             print(snapshot)
             if snapshot.exists() {
@@ -246,6 +254,7 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
                 // appointment notifications
             }
         })
+ */
     }
     
     // MARK: - Phone
@@ -291,7 +300,7 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
         callView?.callObj = self.callObj!
         self.view.addSubview(callView!)
     }
-    
+    /*
     func didAcceptCall() {
         // tokbox vc
         let tokboxVC = TokboxVC()
@@ -300,7 +309,7 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
             self.callView?.removeFromSuperview()
         }
     }
-    
+    */
     func didCancelCall() {
         self.callView?.removeFromSuperview()
     }
