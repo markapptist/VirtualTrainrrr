@@ -246,6 +246,11 @@
 		9276DBA21EEEFAD4003FE23E /* PayPalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */; };
 		9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA31EEF1CB5003FE23E /* StorageService.swift */; };
 		929EF3341EF040AF00DF876B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3331EF040AF00DF876B /* Preferences.swift */; };
+		929EF3361EF049DA00DF876B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3351EF049DA00DF876B /* Notification.swift */; };
+		929EF3381EF04A6600DF876B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3371EF04A6600DF876B /* Session.swift */; };
+		929EF33A1EF04C7900DF876B /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3391EF04C7900DF876B /* Reviews.swift */; };
+		929EF33C1EF04D6A00DF876B /* InstanceSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF33B1EF04D6A00DF876B /* InstanceSession.swift */; };
+		929EF33E1EF04F5900DF876B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF33D1EF04F5900DF876B /* Transaction.swift */; };
 		FCDA20F64A2A418D7ED3D72E /* Pods_VirtualTrainr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80704A4918F7B6AB1292470 /* Pods_VirtualTrainr.framework */; };
 /* End PBXBuildFile section */
 
@@ -536,6 +541,11 @@
 		9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalVC.swift; sourceTree = "<group>"; };
 		9276DBA31EEF1CB5003FE23E /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		929EF3331EF040AF00DF876B /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		929EF3351EF049DA00DF876B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		929EF3371EF04A6600DF876B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		929EF3391EF04C7900DF876B /* Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		929EF33B1EF04D6A00DF876B /* InstanceSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceSession.swift; sourceTree = "<group>"; };
+		929EF33D1EF04F5900DF876B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A32F65EC1C8EEF0CFA150D37 /* Pods-VirtualTrainrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainrUITests/Pods-VirtualTrainrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6F0313CB69733A9E984FCC /* Pods-VirtualTrainr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainr/Pods-VirtualTrainr.debug.xcconfig"; sourceTree = "<group>"; };
 		CC95F7DD6FBCC0FE07B3507A /* Pods_VirtualTrainrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTrainrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1027,18 +1037,23 @@
 		666974FB1ED8B4680036CEE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				666974FC1ED8B4760036CEE5 /* AuthService.swift */,
 				666974FD1ED8B4760036CEE5 /* Person.swift */,
+				923563D71EEF41D400D666B4 /* Client.swift */,
+				923563D51EEF41C600D666B4 /* Trainer.swift */,
+				929EF3391EF04C7900DF876B /* Reviews.swift */,
 				929EF3331EF040AF00DF876B /* Preferences.swift */,
-				9276DB911EEEF468003FE23E /* BaseVC.swift */,
+				929EF3351EF049DA00DF876B /* Notification.swift */,
+				929EF3371EF04A6600DF876B /* Session.swift */,
+				929EF33B1EF04D6A00DF876B /* InstanceSession.swift */,
+				929EF33D1EF04F5900DF876B /* Transaction.swift */,
+				9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */,
+				9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */,
+				9276DB971EEEF633003FE23E /* DataBase.swift */,
 				9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */,
 				9276DBA31EEF1CB5003FE23E /* StorageService.swift */,
-				9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */,
-				9276DB971EEEF633003FE23E /* DataBase.swift */,
-				923563D51EEF41C600D666B4 /* Trainer.swift */,
-				923563D71EEF41D400D666B4 /* Client.swift */,
-				9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */,
+				666974FC1ED8B4760036CEE5 /* AuthService.swift */,
 				666974FE1ED8B4760036CEE5 /* DataService.swift */,
+				9276DB911EEEF468003FE23E /* BaseVC.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1486,6 +1501,7 @@
 				666975551ED8B6E40036CEE5 /* MessageView.swift in Sources */,
 				666975561ED8B6E40036CEE5 /* LabelCustomSpacing.swift in Sources */,
 				666975571ED8B6E40036CEE5 /* CustomUISlider.swift in Sources */,
+				929EF3361EF049DA00DF876B /* Notification.swift in Sources */,
 				666975581ED8B6E40036CEE5 /* MyCalendar.swift in Sources */,
 				9276DB961EEEF5C1003FE23E /* CloudFunctions.swift in Sources */,
 				6669754C1ED8B6600036CEE5 /* ApplePayVC.swift in Sources */,
@@ -1546,12 +1562,14 @@
 				6669751B1ED8B6310036CEE5 /* ClientListTodayVC.swift in Sources */,
 				6669751C1ED8B6310036CEE5 /* ClientListPendingVC.swift in Sources */,
 				6669751D1ED8B6310036CEE5 /* ClientListConfirmedVC.swift in Sources */,
+				929EF33A1EF04C7900DF876B /* Reviews.swift in Sources */,
 				6669751E1ED8B6310036CEE5 /* ClientBookingCell.swift in Sources */,
 				666975131ED8B62C0036CEE5 /* WalletVC.swift in Sources */,
 				666975141ED8B62C0036CEE5 /* TransactionsAvailableVC.swift in Sources */,
 				666975151ED8B62C0036CEE5 /* TransactionsTableViewCell.swift in Sources */,
 				666975161ED8B62C0036CEE5 /* TransactionsPendingVC.swift in Sources */,
 				666975171ED8B62C0036CEE5 /* TransactionsWithdrawalVC.swift in Sources */,
+				929EF33C1EF04D6A00DF876B /* InstanceSession.swift in Sources */,
 				666975181ED8B62C0036CEE5 /* GettingPaidVC.swift in Sources */,
 				666975191ED8B62C0036CEE5 /* SessionsPricingView.swift in Sources */,
 				9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */,
@@ -1561,10 +1579,12 @@
 				666975081ED8B6260036CEE5 /* TrainerVC.swift in Sources */,
 				666975091ED8B6260036CEE5 /* TrainerSessionsSegmentVC.swift in Sources */,
 				6669750A1ED8B6260036CEE5 /* TrainerReviewSegmentVC.swift in Sources */,
+				929EF33E1EF04F5900DF876B /* Transaction.swift in Sources */,
 				6669750B1ED8B6260036CEE5 /* TrainerAboutMeSegmentVC.swift in Sources */,
 				6669750C1ED8B6260036CEE5 /* TrainerPackageSegmentVC.swift in Sources */,
 				9276DB981EEEF633003FE23E /* DataBase.swift in Sources */,
 				6669750D1ED8B6260036CEE5 /* TrainerMeetUpVC.swift in Sources */,
+				929EF3381EF04A6600DF876B /* Session.swift in Sources */,
 				6669750E1ED8B6260036CEE5 /* TrainerMeetUpLocationVC.swift in Sources */,
 				6669750F1ED8B6260036CEE5 /* TrainerMeetUpDateVC.swift in Sources */,
 				666975101ED8B6260036CEE5 /* TrainerMeetUpTimeVC.swift in Sources */,

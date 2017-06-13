@@ -10,4 +10,7 @@ import Foundation
 
 class Client: Person {
     
+    private var heartedTrainers: Array<Trainer>? = nil
+    private var trainers: Array<Trainer>? = nil
+    
 }

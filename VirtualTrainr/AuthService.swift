@@ -151,18 +151,18 @@ class AuthService: NSObject {
     func getSignedInUser() -> Person {
         if let user = Auth.auth().currentUser {
             if user.displayName != nil {
-                let signedInUser = Person(uid: user.uid, email: user.email!, name: nil)
-                print(signedInUser.uid, signedInUser.email, user.displayName!)
+                let signedInUser = Person(id: user.uid, email: user.email!, name: nil)
+                print(signedInUser.id, signedInUser.email, user.displayName!)
                 return signedInUser
             }
             else {
-                let signedInUser = Person(uid: user.uid, email: user.email!, name: nil)
+                let signedInUser = Person(id: user.uid, email: user.email!, name: nil)
                 print(signedInUser.uid, signedInUser.email, "")
                 return signedInUser
             }
         }
         else {
-            let noUserSignedIn = Person(uid: "", email: "", name: nil)
+            let noUserSignedIn = Person(id: "", email: "", name: nil)
             return noUserSignedIn
         }
     }

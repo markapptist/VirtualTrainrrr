@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         UserDefaults.standard.set(false, forKey: "googleCheck")
         UserDefaults.standard.set(false, forKey: "linkedInCheck")
 
-        print(UUID.init().hashValue)
+        print(Days.friday.days())
         
         let entryScreen = EntryScreen()
         

@@ -25,15 +25,10 @@ class RegisterVC: BaseVC {
     
     var subTitleLbl: UILabel?
     
-    let heavyFont = UIFont(name: "SFUIDisplay-Thin", size: 30)
-    let subtitleFont = UIFont(name: "SFUIText-LightItalic", size: 15)
 
     let pageControl = UIPageControl()
     
-    // images
-    let backBtnImage = UIImage(named: "back_icon")
-    let vtImage = UIImage(named: "vt_icon")
-    let backgroundImage = UIImage(named: "intro_background")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
