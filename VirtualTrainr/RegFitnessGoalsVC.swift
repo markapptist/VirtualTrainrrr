@@ -21,10 +21,10 @@ class RegFitnessGoalsVC: RegTravelVC {
         self.pageControl.isHidden = false
         self.titleLbl.text = "What are your fitness goals?"
         
-        option1Lbl.text = "Weight Loss"
-        option2Lbl.text = "Get Trimmed and Toned"
-        option3Lbl.text = "Build Muscle Strength"
-        option4Lbl.text = "Become Healthier"
+        option1Lbl.text = Activity.weightLoss.actName()
+        option2Lbl.text = Activity.trimmed.actName()
+        option3Lbl.text = Activity.strength.actName()
+        option4Lbl.text = Activity.healthier.actName()
         
         self.view.addSubview(option5Btn)
         
