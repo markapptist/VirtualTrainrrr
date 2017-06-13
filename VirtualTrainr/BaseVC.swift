@@ -28,10 +28,12 @@ class BaseVC: UIViewController, UNUserNotificationCenterDelegate, CLLocationMana
     let heavyFont = UIFont(name: "SFUIDisplay-Thin", size: 30)
     let subtitleFont = UIFont(name: "SFUIText-LightItalic", size: 15)
     
+    /*
     // current person
     var currentUser: Person {
         return AuthService.instance.getSignedInUser()
     }
+    */
     
     // nav bar height
     var navBarHeight: CGFloat? {

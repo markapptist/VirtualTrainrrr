@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Notification {
+struct CreatedNotification {
     var sender: Person
     var recipient: Person
     var message: String

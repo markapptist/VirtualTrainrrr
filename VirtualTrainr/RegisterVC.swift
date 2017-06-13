@@ -15,7 +15,6 @@ class RegisterVC: BaseVC {
     var topLabel = UILabel()
     var bottomButton = UIButton()
     var bottomLabel = UILabel()
-
     
     // view
     let backgroundImageView = UIImageView(frame: UIScreen.main.bounds)
@@ -24,11 +23,8 @@ class RegisterVC: BaseVC {
     let titleLbl = UILabel()
     
     var subTitleLbl: UILabel?
-    
 
     let pageControl = UIPageControl()
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

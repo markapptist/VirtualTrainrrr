@@ -11,7 +11,7 @@ import UserNotifications
 import CoreLocation
 import FirebaseDatabase
 
-let profileNotification = Notification.Name("profileNotification")
+//let profileNotification = Notification.Name("profileNotification")
 
 let portals = ["client", "trainer"]
 
@@ -55,9 +55,11 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
     var locationManager: CLLocationManager!
     var currentLocation: CLLocationCoordinate2D?
     
-    var currentUser: User {
+    /*
+    var currentUser: Person {
         return AuthService.instance.getSignedInUser()
     }
+    */
     
     // notification center
     var center = UNUserNotificationCenter.current()
@@ -181,7 +183,7 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
             
             if currentPortal == "Trainer" {
                 // save to database
-                DataService.instance.updateCoordinates(latitude: latitude, longitude: longitude, email: currentUser.email, accountUID: currentUser.uid)
+//                DataService.instance.updateCoordinates(latitude: latitude, longitude: longitude, email: currentUser.email, accountUID: currentUser.uid)
             }
         }
     }
@@ -201,7 +203,7 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
         self.viewControllers = [appointmentNC, trainerDiscoverNC, inboxNC, profileNC]
         
         // remove location
-        DataService.instance.removeOnlineStatus(uid: currentUser.uid)
+//        DataService.instance.removeOnlineStatus(uid: currentUser.id)
         
     }
     
@@ -256,7 +258,7 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
         })
  */
     }
-    
+    /*
     // MARK: - Phone
     
     func didCreateCall(info: NSDictionary?) {
@@ -313,5 +315,5 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
     func didCancelCall() {
         self.callView?.removeFromSuperview()
     }
-    
+    */
 }

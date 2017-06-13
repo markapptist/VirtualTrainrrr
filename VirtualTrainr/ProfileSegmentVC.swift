@@ -8,11 +8,11 @@
 
 import UIKit
 
-let thirdNotification = Notification.Name("thirdNotification")
+//let thirdNotification = Notification.Name("thirdNotification")
 let tagStates = ["0", "1", "2", "3", "4", "5"]
 var currentTag: String = ""
 
-let editBioNotification = Notification.Name("Notification")
+//let editBioNotification = Notification.Name("Notification")
 
 var textBio = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making."
 

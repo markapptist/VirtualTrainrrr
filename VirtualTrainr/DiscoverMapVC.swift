@@ -124,7 +124,7 @@ extension DiscoverMapVC {
                 //                let trainerName = trainerData?["name"] as? String
                 let trainerEmail = trainerData?["email"] as? String
                 
-                let aTrainer = Trainer(uid: trainerUID, email: trainerEmail!, name: nil)
+//                let aTrainer = Trainer(uid: trainerUID, email: trainerEmail!, name: nil)
                 
                 let latitude = trainerData?["latitude"] as? Double
                 let longitude = trainerData?["longitude"] as? Double
