@@ -88,18 +88,22 @@ enum HowOften: String {
 }
 
 enum Activity: String {
-    case aerobics, mentalHealth, endurance, weightLoss, strengthTraining
+    case weightLoss, trimmedToned, muscleStrength, healthier, mentalHealth, endurance, strengthTraining
     
     func actName() -> String {
         switch self {
-        case .aerobics:
-            return "Aerobics"
+        case .weightLoss:
+            return "Weight Loss"
+        case .trimmedToned:
+            return "Get Trimmed and Toned"
+        case .muscleStrength:
+            return "Build Muscle Strength"
+        case .healthier:
+            return "Become Healthier"
         case .mentalHealth:
             return "Mental Health"
         case .endurance:
             return "Endurance"
-        case .weightLoss:
-            return "Weight Loss"
         case .strengthTraining:
             return "Strength and body building"
         }

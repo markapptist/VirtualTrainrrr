@@ -144,15 +144,15 @@ class MyDashboard: UITabBarController, UITabBarControllerDelegate, UNUserNotific
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         
-        let userUID = currentUser.uid
+//        let userUID = currentUser.uid
         
         locationManager.startUpdatingLocation()
         
-        callingRef = DataService.instance.usersRef.child(userUID).child("/Phone/Calling")
-        incomingCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Incoming")
-        acceptCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Accepted")
-        endCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Ended")
-        messagesRef = DataService.instance.usersRef.child(userUID).child("/Inbox/Messages")
+//        callingRef = DataService.instance.usersRef.child(userUID).child("/Phone/Calling")
+//        incomingCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Incoming")
+//        acceptCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Accepted")
+//        endCallRef = DataService.instance.usersRef.child(userUID).child("/Phone/Ended")
+//        messagesRef = DataService.instance.usersRef.child(userUID).child("/Inbox/Messages")
         //        notificationsRef = DataService.instance.usersRef.child(userUID).child("/test")
         
         // create database observers

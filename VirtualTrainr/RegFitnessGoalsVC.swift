@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Graph
 
 class RegFitnessGoalsVC: RegTravelVC {
     
     let option5Btn = UIButton()
     let option5Lbl = UILabel()
     
-    var goals: NSMutableDictionary? = [:]
+    var goals: Array<FitnessGoals> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,6 +136,10 @@ class RegFitnessGoalsVC: RegTravelVC {
     }
     
     override func nextBtnPressed() {
+        // create entity of client in graph
+        let client = Entity(type: "Client")
+        client["fitnessGoals"] =
+        
         UserDefaults.standard.set(goals!, forKey: "FitnessGoals")
         let trainTimes = RegTrainTimesVC()
         self.present(trainTimes, animated: true, completion: nil)

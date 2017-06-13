@@ -49,7 +49,7 @@ class AppContainerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.showApptDetail(notification:)), name: calendarNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showApplyFitlers(notification:)), name: secondNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showProfile(notification:)), name: profileNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.showProfile(notification:)), name: profileNotification, object: nil)
         
         self.makeDetailView().isHidden = true
         blurEffectView.isHidden = true

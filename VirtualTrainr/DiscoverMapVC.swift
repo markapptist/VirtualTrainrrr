@@ -12,10 +12,8 @@ import GooglePlaces
 import FirebaseDatabase
 import CoreLocation
 
-// pass current location to here
-
 class DiscoverMapVC: BaseVC {
-
+    
     let pinImage = UIImage(named: "location_ic")
     let sliderImage = UIImage(named: "slider_thumb")
     
@@ -59,7 +57,7 @@ class DiscoverMapVC: BaseVC {
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
-        self.getTrainers()
+        self.mapTrainers()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -107,7 +105,7 @@ class DiscoverMapVC: BaseVC {
         }
     }
 }
-
+/*
 extension DiscoverMapVC {
     // MARK: - Online Trainers List
     
@@ -150,3 +148,4 @@ extension DiscoverMapVC {
     }
  
 }
+ */

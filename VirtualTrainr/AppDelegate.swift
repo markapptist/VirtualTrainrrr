@@ -17,7 +17,7 @@ import Stripe
 
 let userDefaults = UserDefaults.standard
 
-//let signedInNotification = Notification.Name("signedIn")
+let signedInNotification = Notification.Name("signedIn")
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
