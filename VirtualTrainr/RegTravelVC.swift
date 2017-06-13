@@ -21,13 +21,12 @@ class RegTravelVC: RegisterVC {
     let option4Lbl = UILabel()
     
     let nextButton = CircleButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.pageControl.currentPage = 3
-
-        // Do any additional setup after loading the view.
+        
         titleLbl.text = "How far are you willing to travel to meet your trainer?"
         
         self.view.addSubview(option1Btn)
@@ -161,21 +160,17 @@ class RegTravelVC: RegisterVC {
     }
     
     func option1BtnPressed(){
-       
+        
         if(!option1Btn.isSelected) {
             option1Btn.isSelected = true
             nextButton.isHidden = false
             option1Btn.alpha = 0.7
         }   else {
-        option1Btn.isSelected = false
+            option1Btn.isSelected = false
             option1Btn.alpha = 0.2
         }
         
-        
-        if(!option1Btn.isSelected && !option2Btn.isSelected && !option3Btn.isSelected && !option4Btn.isSelected)
-        {
-            nextButton.isHidden = true
-        }
+        self.checkNoneSelected()
     }
     
     func option2BtnPressed(){
@@ -189,11 +184,8 @@ class RegTravelVC: RegisterVC {
             option2Btn.alpha = 0.2
         }
         
+        self.checkNoneSelected()
         
-        if(!option1Btn.isSelected && !option2Btn.isSelected && !option3Btn.isSelected && !option4Btn.isSelected)
-        {
-            nextButton.isHidden = true
-        }
     }
     
     func option3BtnPressed(){
@@ -207,11 +199,7 @@ class RegTravelVC: RegisterVC {
             option3Btn.alpha = 0.2
         }
         
-        
-        if(!option1Btn.isSelected && !option2Btn.isSelected && !option3Btn.isSelected && !option4Btn.isSelected)
-        {
-            nextButton.isHidden = true
-        }
+        self.checkNoneSelected()
     }
     
     func option4BtnPressed(){
@@ -225,6 +213,10 @@ class RegTravelVC: RegisterVC {
             option4Btn.alpha = 0.2
         }
         
+        self.checkNoneSelected()
+    }
+    
+    func checkNoneSelected() {
         if(!option1Btn.isSelected && !option2Btn.isSelected && !option3Btn.isSelected && !option4Btn.isSelected)
         {
             nextButton.isHidden = true
@@ -235,21 +227,5 @@ class RegTravelVC: RegisterVC {
         let fitnessGoals = RegFitnessGoalsVC()
         present(fitnessGoals, animated: true, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

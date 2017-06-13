@@ -11,7 +11,6 @@ import UIKit
 
 class RegisterTrainerVC: RegisterVC {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,26 +24,21 @@ class RegisterTrainerVC: RegisterVC {
         
         topLabel.text = "Trainer"
         bottomLabel.text = "Gym"
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
-        
         bottomButton.addTarget(self, action: #selector(self.bottomBtnPressed), for: .touchUpInside)
-        
     }
     
-    
     override func topBtnPressed() {
-        let vc = LogInWithEmailVC()
-        self.present(vc, animated: true, completion: nil)
+        let name = RegNameVC()
+        self.present(name, animated: true, completion: nil)
     }
     
     override func bottomBtnPressed() {
-        let name = RegNameVC()
-        self.present(name, animated: true, completion: nil)
+        let vc = LogInWithEmailVC()
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '30DC7F7E5717CB51058A280358A8CE76'
+               BlueprintIdentifier = 'DDD34BABB9AF61D1885C97FF611125BA'
                BlueprintName = 'Stripe'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Stripe.framework'>

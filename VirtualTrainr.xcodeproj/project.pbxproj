@@ -106,7 +106,7 @@
 		666975571ED8B6E40036CEE5 /* CustomUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974ED1ED8B4610036CEE5 /* CustomUISlider.swift */; };
 		666975581ED8B6E40036CEE5 /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974EE1ED8B4610036CEE5 /* MyCalendar.swift */; };
 		666975591ED8B6EE0036CEE5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FC1ED8B4760036CEE5 /* AuthService.swift */; };
-		6669755A1ED8B6EE0036CEE5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FD1ED8B4760036CEE5 /* User.swift */; };
+		6669755A1ED8B6EE0036CEE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FD1ED8B4760036CEE5 /* Person.swift */; };
 		6669755B1ED8B6EE0036CEE5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FE1ED8B4760036CEE5 /* DataService.swift */; };
 		6669755C1ED8B75C0036CEE5 /* SF-Compact-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 660D21C91E8C8F8400C11808 /* SF-Compact-Display-Black.otf */; };
 		6669755D1ED8B75C0036CEE5 /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 660D21CA1E8C8F8400C11808 /* SF-Compact-Display-Bold.otf */; };
@@ -233,6 +233,24 @@
 		6690F5401E93167E001C4588 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5371E93167E001C4588 /* GoogleToolboxForMac.framework */; };
 		6690F5411E93167E001C4588 /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5381E93167E001C4588 /* GTMOAuth2.framework */; };
 		6690F5421E93167E001C4588 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6690F5391E93167E001C4588 /* GTMSessionFetcher.framework */; };
+		923563D61EEF41C600D666B4 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923563D51EEF41C600D666B4 /* Trainer.swift */; };
+		923563D81EEF41D400D666B4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923563D71EEF41D400D666B4 /* Client.swift */; };
+		9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB911EEEF468003FE23E /* BaseVC.swift */; };
+		9276DB941EEEF579003FE23E /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB931EEEF579003FE23E /* CallView.swift */; };
+		9276DB961EEEF5C1003FE23E /* CloudFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */; };
+		9276DB981EEEF633003FE23E /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB971EEEF633003FE23E /* DataBase.swift */; };
+		9276DB9A1EEEF9B5003FE23E /* EditPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB991EEEF9B5003FE23E /* EditPreferences.swift */; };
+		9276DB9C1EEEF9E7003FE23E /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */; };
+		9276DB9E1EEEFA99003FE23E /* NewMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9D1EEEFA99003FE23E /* NewMessageVC.swift */; };
+		9276DBA01EEEFAB4003FE23E /* OneToOneCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */; };
+		9276DBA21EEEFAD4003FE23E /* PayPalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */; };
+		9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA31EEF1CB5003FE23E /* StorageService.swift */; };
+		929EF3341EF040AF00DF876B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3331EF040AF00DF876B /* Preferences.swift */; };
+		929EF3361EF049DA00DF876B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3351EF049DA00DF876B /* Notification.swift */; };
+		929EF3381EF04A6600DF876B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3371EF04A6600DF876B /* Session.swift */; };
+		929EF33A1EF04C7900DF876B /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3391EF04C7900DF876B /* Reviews.swift */; };
+		929EF33C1EF04D6A00DF876B /* InstanceSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF33B1EF04D6A00DF876B /* InstanceSession.swift */; };
+		929EF33E1EF04F5900DF876B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF33D1EF04F5900DF876B /* Transaction.swift */; };
 		FCDA20F64A2A418D7ED3D72E /* Pods_VirtualTrainr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80704A4918F7B6AB1292470 /* Pods_VirtualTrainr.framework */; };
 /* End PBXBuildFile section */
 
@@ -481,7 +499,7 @@
 		666974ED1ED8B4610036CEE5 /* CustomUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUISlider.swift; sourceTree = "<group>"; };
 		666974EE1ED8B4610036CEE5 /* MyCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
 		666974FC1ED8B4760036CEE5 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		666974FD1ED8B4760036CEE5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		666974FD1ED8B4760036CEE5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		666974FE1ED8B4760036CEE5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		667910E91EDA7F67001E686E /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		667910EB1EDA8276001E686E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/VirtualTrainr-hbbdmajzeuflfqdkstwxkmddsaes/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -504,12 +522,30 @@
 		6690F5391E93167E001C4588 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "../../../Library/Developer/Xcode/DerivedData/VirtualTrainr-fqngwtajktjyhqexrulofsfstoxl/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
 		67FD431800A4A497B6811B4C /* Pods-VirtualTrainrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainrUITests/Pods-VirtualTrainrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		92100EEC1E9BF21D00B54844 /* VirtualTrainr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VirtualTrainr.entitlements; sourceTree = "<group>"; };
+		923563D51EEF41C600D666B4 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		923563D71EEF41D400D666B4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		923F7A531E884D0100E9E2B4 /* vt_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vt_icon.png; path = ../../vt_icon.png; sourceTree = "<group>"; };
 		923F7A551E884E2000E9E2B4 /* splash_screen_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_screen_logo.png; path = ../../splash_screen_logo.png; sourceTree = "<group>"; };
 		923F7A571E88520500E9E2B4 /* splash_screen_border_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_screen_border_button.png; path = ../../splash_screen_border_button.png; sourceTree = "<group>"; };
 		923F7A591E88520B00E9E2B4 /* splash_screen_fill_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_screen_fill_button.png; path = ../../splash_screen_fill_button.png; sourceTree = "<group>"; };
 		923F7A5D1E8855E800E9E2B4 /* intro_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intro_background.png; path = ../../intro_background.png; sourceTree = "<group>"; };
 		923F7A5F1E8856C800E9E2B4 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = ../../back_icon.png; sourceTree = "<group>"; };
+		9276DB911EEEF468003FE23E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		9276DB931EEEF579003FE23E /* CallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFunctions.swift; sourceTree = "<group>"; };
+		9276DB971EEEF633003FE23E /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		9276DB991EEEF9B5003FE23E /* EditPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPreferences.swift; sourceTree = "<group>"; };
+		9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		9276DB9D1EEEFA99003FE23E /* NewMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageVC.swift; sourceTree = "<group>"; };
+		9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneToOneCall.swift; sourceTree = "<group>"; };
+		9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalVC.swift; sourceTree = "<group>"; };
+		9276DBA31EEF1CB5003FE23E /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		929EF3331EF040AF00DF876B /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		929EF3351EF049DA00DF876B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		929EF3371EF04A6600DF876B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		929EF3391EF04C7900DF876B /* Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		929EF33B1EF04D6A00DF876B /* InstanceSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceSession.swift; sourceTree = "<group>"; };
+		929EF33D1EF04F5900DF876B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A32F65EC1C8EEF0CFA150D37 /* Pods-VirtualTrainrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainrUITests/Pods-VirtualTrainrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6F0313CB69733A9E984FCC /* Pods-VirtualTrainr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainr/Pods-VirtualTrainr.debug.xcconfig"; sourceTree = "<group>"; };
 		CC95F7DD6FBCC0FE07B3507A /* Pods_VirtualTrainrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTrainrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -792,6 +828,7 @@
 		665280CC1E8F1C2F000EE04C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9276DB931EEEF579003FE23E /* CallView.swift */,
 				6610ADE51EDDFC1F0018FBBE /* LaunchScreen.storyboard */,
 				6610ADE71EDDFC1F0018FBBE /* Main.storyboard */,
 			);
@@ -804,6 +841,8 @@
 				666974A51ED8B3EE0036CEE5 /* TrainerSide */,
 				666974741ED8B37C0036CEE5 /* ClientSide */,
 				66696BCF1ED8B2DB0036CEE5 /* MyDashboard.swift */,
+				9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */,
+				9276DB9D1EEEFA99003FE23E /* NewMessageVC.swift */,
 				66696BD01ED8B2DB0036CEE5 /* NavController.swift */,
 				6669746E1ED8B33D0036CEE5 /* PaymentFramework */,
 				666974471ED8B3160036CEE5 /* RegisterProcess */,
@@ -895,6 +934,7 @@
 				6669748B1ED8B3E10036CEE5 /* ClientVC.swift */,
 				6669748C1ED8B3E10036CEE5 /* ProfileSegmentVC.swift */,
 				6669748D1ED8B3E10036CEE5 /* MyFavouritesSegmentVC.swift */,
+				9276DB991EEEF9B5003FE23E /* EditPreferences.swift */,
 				6669748E1ED8B3E10036CEE5 /* TransactionHistorySegmentVC.swift */,
 				6669748F1ED8B3E10036CEE5 /* PaymentSegmentVC.swift */,
 				666974901ED8B3E10036CEE5 /* SettingsSegmentVC.swift */,
@@ -997,9 +1037,23 @@
 		666974FB1ED8B4680036CEE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				666974FD1ED8B4760036CEE5 /* Person.swift */,
+				923563D71EEF41D400D666B4 /* Client.swift */,
+				923563D51EEF41C600D666B4 /* Trainer.swift */,
+				929EF3391EF04C7900DF876B /* Reviews.swift */,
+				929EF3331EF040AF00DF876B /* Preferences.swift */,
+				929EF3351EF049DA00DF876B /* Notification.swift */,
+				929EF3371EF04A6600DF876B /* Session.swift */,
+				929EF33B1EF04D6A00DF876B /* InstanceSession.swift */,
+				929EF33D1EF04F5900DF876B /* Transaction.swift */,
+				9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */,
+				9276DB9B1EEEF9E7003FE23E /* LocalNotification.swift */,
+				9276DB971EEEF633003FE23E /* DataBase.swift */,
+				9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */,
+				9276DBA31EEF1CB5003FE23E /* StorageService.swift */,
 				666974FC1ED8B4760036CEE5 /* AuthService.swift */,
-				666974FD1ED8B4760036CEE5 /* User.swift */,
 				666974FE1ED8B4760036CEE5 /* DataService.swift */,
+				9276DB911EEEF468003FE23E /* BaseVC.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1327,7 +1381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3ED76103DC1B7CCD11C504C3 /* [CP] Check Pods Manifest.lock */ = {
@@ -1342,7 +1396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		58752FAFE38ACF6F438C9B31 /* [CP] Embed Pods Frameworks */ = {
@@ -1372,7 +1426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7DA99695D187852945B78CEC /* [CP] Copy Pods Resources */ = {
@@ -1427,12 +1481,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9276DB941EEEF579003FE23E /* CallView.swift in Sources */,
 				667910EF1EDA829B001E686E /* GoogleService-Info.plist in Sources */,
 				668BC1C01EDA6AE300292C02 /* VirtualTrainr-Bridging-Header.h in Sources */,
 				666975CE1ED8EE060036CEE5 /* StripeApplePay-Bridging.h in Sources */,
 				666975591ED8B6EE0036CEE5 /* AuthService.swift in Sources */,
-				6669755A1ED8B6EE0036CEE5 /* User.swift in Sources */,
+				9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */,
+				6669755A1ED8B6EE0036CEE5 /* Person.swift in Sources */,
 				6669755B1ED8B6EE0036CEE5 /* DataService.swift in Sources */,
+				9276DB9C1EEEF9E7003FE23E /* LocalNotification.swift in Sources */,
 				6669754D1ED8B6E40036CEE5 /* ItemButton.swift in Sources */,
 				6669754E1ED8B6E40036CEE5 /* ItemButtonBlue.swift in Sources */,
 				6669754F1ED8B6E40036CEE5 /* SelectedItemButton.swift in Sources */,
@@ -1444,15 +1501,19 @@
 				666975551ED8B6E40036CEE5 /* MessageView.swift in Sources */,
 				666975561ED8B6E40036CEE5 /* LabelCustomSpacing.swift in Sources */,
 				666975571ED8B6E40036CEE5 /* CustomUISlider.swift in Sources */,
+				929EF3361EF049DA00DF876B /* Notification.swift in Sources */,
 				666975581ED8B6E40036CEE5 /* MyCalendar.swift in Sources */,
+				9276DB961EEEF5C1003FE23E /* CloudFunctions.swift in Sources */,
 				6669754C1ED8B6600036CEE5 /* ApplePayVC.swift in Sources */,
 				666975391ED8B6530036CEE5 /* RegisterVC.swift in Sources */,
+				923563D61EEF41C600D666B4 /* Trainer.swift in Sources */,
 				6669753A1ED8B6530036CEE5 /* SignUpVC.swift in Sources */,
 				6669753B1ED8B6530036CEE5 /* LogInVC.swift in Sources */,
 				6669753C1ED8B6530036CEE5 /* LogInWithEmailVC.swift in Sources */,
 				6669753D1ED8B6530036CEE5 /* RegStartVC.swift in Sources */,
 				6669753E1ED8B6530036CEE5 /* RegGenderVC.swift in Sources */,
 				6669753F1ED8B6530036CEE5 /* RegisterTrainerVC.swift in Sources */,
+				929EF3341EF040AF00DF876B /* Preferences.swift in Sources */,
 				666975401ED8B6530036CEE5 /* RegNameVC.swift in Sources */,
 				666975411ED8B6530036CEE5 /* RegFindTrainerVC.swift in Sources */,
 				666975421ED8B6530036CEE5 /* RegTravelVC.swift in Sources */,
@@ -1463,6 +1524,8 @@
 				666975471ED8B6530036CEE5 /* RegBirthdateVC.swift in Sources */,
 				666975481ED8B6530036CEE5 /* RegTrainerWhen.swift in Sources */,
 				666975491ED8B6530036CEE5 /* RegKeepNotifiedVC.swift in Sources */,
+				9276DB9E1EEEFA99003FE23E /* NewMessageVC.swift in Sources */,
+				9276DB9A1EEEF9B5003FE23E /* EditPreferences.swift in Sources */,
 				6669754A1ED8B6530036CEE5 /* ErrorHandler.swift in Sources */,
 				6669754B1ED8B6530036CEE5 /* WebViewController.swift in Sources */,
 				666975381ED8B64C0036CEE5 /* InboxVC.swift in Sources */,
@@ -1472,6 +1535,7 @@
 				6669752F1ED8B6430036CEE5 /* TrainerCollectionViewCell.swift in Sources */,
 				666975301ED8B6430036CEE5 /* DiscoverTrainerVC.swift in Sources */,
 				666975311ED8B6430036CEE5 /* DiscoverMapVC.swift in Sources */,
+				923563D81EEF41D400D666B4 /* Client.swift in Sources */,
 				666975321ED8B6430036CEE5 /* DiscoverTrainerCell.swift in Sources */,
 				666975331ED8B6430036CEE5 /* MyDashboard.swift in Sources */,
 				666975341ED8B6430036CEE5 /* NavController.swift in Sources */,
@@ -1479,6 +1543,7 @@
 				666975221ED8B63B0036CEE5 /* ClientProfileSegmentVC.swift in Sources */,
 				666975231ED8B63B0036CEE5 /* ClientVC.swift in Sources */,
 				666975241ED8B63B0036CEE5 /* ProfileSegmentVC.swift in Sources */,
+				9276DBA01EEEFAB4003FE23E /* OneToOneCall.swift in Sources */,
 				666975251ED8B63B0036CEE5 /* MyFavouritesSegmentVC.swift in Sources */,
 				666975261ED8B63B0036CEE5 /* TransactionHistorySegmentVC.swift in Sources */,
 				666975271ED8B63B0036CEE5 /* PaymentSegmentVC.swift in Sources */,
@@ -1490,29 +1555,36 @@
 				6610ADF71EDDFE960018FBBE /* AppLanguageVC.swift in Sources */,
 				6669752D1ED8B63B0036CEE5 /* CameraVC.swift in Sources */,
 				6669752E1ED8B63B0036CEE5 /* LanguageCell.swift in Sources */,
+				9276DBA21EEEFAD4003FE23E /* PayPalVC.swift in Sources */,
 				6669751F1ED8B6360036CEE5 /* DiscoverClientVC.swift in Sources */,
 				666975201ED8B6360036CEE5 /* DiscoverClientCell.swift in Sources */,
 				6669751A1ED8B6310036CEE5 /* SchedulingVC.swift in Sources */,
 				6669751B1ED8B6310036CEE5 /* ClientListTodayVC.swift in Sources */,
 				6669751C1ED8B6310036CEE5 /* ClientListPendingVC.swift in Sources */,
 				6669751D1ED8B6310036CEE5 /* ClientListConfirmedVC.swift in Sources */,
+				929EF33A1EF04C7900DF876B /* Reviews.swift in Sources */,
 				6669751E1ED8B6310036CEE5 /* ClientBookingCell.swift in Sources */,
 				666975131ED8B62C0036CEE5 /* WalletVC.swift in Sources */,
 				666975141ED8B62C0036CEE5 /* TransactionsAvailableVC.swift in Sources */,
 				666975151ED8B62C0036CEE5 /* TransactionsTableViewCell.swift in Sources */,
 				666975161ED8B62C0036CEE5 /* TransactionsPendingVC.swift in Sources */,
 				666975171ED8B62C0036CEE5 /* TransactionsWithdrawalVC.swift in Sources */,
+				929EF33C1EF04D6A00DF876B /* InstanceSession.swift in Sources */,
 				666975181ED8B62C0036CEE5 /* GettingPaidVC.swift in Sources */,
 				666975191ED8B62C0036CEE5 /* SessionsPricingView.swift in Sources */,
+				9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */,
 				666975051ED8B6260036CEE5 /* TrainerProfileVC.swift in Sources */,
 				666975061ED8B6260036CEE5 /* MyTrainersSegmentVC.swift in Sources */,
 				666975071ED8B6260036CEE5 /* TrainerCell.swift in Sources */,
 				666975081ED8B6260036CEE5 /* TrainerVC.swift in Sources */,
 				666975091ED8B6260036CEE5 /* TrainerSessionsSegmentVC.swift in Sources */,
 				6669750A1ED8B6260036CEE5 /* TrainerReviewSegmentVC.swift in Sources */,
+				929EF33E1EF04F5900DF876B /* Transaction.swift in Sources */,
 				6669750B1ED8B6260036CEE5 /* TrainerAboutMeSegmentVC.swift in Sources */,
 				6669750C1ED8B6260036CEE5 /* TrainerPackageSegmentVC.swift in Sources */,
+				9276DB981EEEF633003FE23E /* DataBase.swift in Sources */,
 				6669750D1ED8B6260036CEE5 /* TrainerMeetUpVC.swift in Sources */,
+				929EF3381EF04A6600DF876B /* Session.swift in Sources */,
 				6669750E1ED8B6260036CEE5 /* TrainerMeetUpLocationVC.swift in Sources */,
 				6669750F1ED8B6260036CEE5 /* TrainerMeetUpDateVC.swift in Sources */,
 				666975101ED8B6260036CEE5 /* TrainerMeetUpTimeVC.swift in Sources */,

@@ -64,6 +64,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Graph.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Localize-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-VirtualTrainr.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -91,6 +101,102 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3106EDE4A396D29EE7077A2391922078</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>332F91393FB1DE033D370B4CEDDD5FCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44CAD6CE523055ED339E87154473A254</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>593E9479C06FB200807D11AB29EB50BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B5AC3C06B783F8674FDB4C0F900B56A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>681BE6E3D02A43F9BA63777AC435C8FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7335E9C9689F3B8A16F063A884748533</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FC52E15E66DA791A28369DBB5182C81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AABB838D6C49387869A3D50CEE58A69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7FEAA14E89971698ACA148F7F7202F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1C4AAFAF49036C7007633DAA3C806AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5A2DB7A84B7B78E359870D2E1B24AA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB31E62DF803FF697FB3CB6D21B5437E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDD34BABB9AF61D1885C97FF611125BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4866E4F29AF264E2E6E1364538B4623</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC00A2B118650C6C90D34FB24F60280D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

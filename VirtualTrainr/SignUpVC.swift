@@ -28,8 +28,6 @@ class SignUpVC: RegisterVC, GIDSignInUIDelegate {
         NotificationCenter.default.addObserver(forName: signedInNotification, object: nil, queue: nil, using: presentDashboard(notification:))
         
         self.pageControl.numberOfPages = 2
-
-        // Do any additional setup after loading the view.
         
         facebookBtn.translatesAutoresizingMaskIntoConstraints = false
         registerBtn.translatesAutoresizingMaskIntoConstraints = false
@@ -221,16 +219,5 @@ class SignUpVC: RegisterVC, GIDSignInUIDelegate {
             
         }
     }
-    
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -26,8 +26,6 @@ class RegStartVC: RegisterVC {
         topLabel.text = "Help me find a trainer"
         bottomLabel.text = "Help me find new clients to train"
 
-     
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +46,4 @@ class RegStartVC: RegisterVC {
         bottomButton.removeTarget(self, action: #selector(self.bottomBtnPressed), for: .touchUpInside)
         self.present(trainerVC, animated: true, completion: nil)
     }
-
-    
 }

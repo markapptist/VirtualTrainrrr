@@ -13,7 +13,7 @@ class RegBirthdateVC: RegTravelVC {
     let birthdateBtn = UIButton()
     let datePicker = UIDatePicker()
     let birthdateTextField = UITextField()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +29,9 @@ class RegBirthdateVC: RegTravelVC {
         
         titleLbl.text = "Please enter your birthdate"
         
-        
         self.view.addSubview(birthdateTextField)
         self.birthdateTextField.addSubview(birthdateBtn)
-
+        
         birthdateBtn.setImage(#imageLiteral(resourceName: "birthday_ic.png"), for: .normal)
         birthdateBtn.imageView?.alpha = 0.6
         birthdateBtn.imageView?.contentMode = .scaleAspectFit
@@ -57,10 +56,6 @@ class RegBirthdateVC: RegTravelVC {
         birthdateTextField.widthAnchor.constraint(equalTo: birthdateBtn.widthAnchor, multiplier: 0.8).isActive = true
         birthdateTextField.heightAnchor.constraint(equalTo: birthdateBtn.heightAnchor, multiplier: 1.0).isActive = true
         
-      
-
-    
-        
         datePicker.isHidden = true
         datePicker.datePickerMode = .date
         datePicker.backgroundColor = UIColor.white
@@ -82,52 +77,28 @@ class RegBirthdateVC: RegTravelVC {
         nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         nextButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30).isActive = true
         nextButton.topAnchor.constraint(equalTo: self.birthdateBtn.bottomAnchor, constant: 35).isActive = true
-
-
-        // Do any additional setup after loading the view.
     }
     
     func dateBtnPressed() {
-      
         if(datePicker.isHidden == true) {
             datePicker.isHidden = false
             nextButton.isHidden = false
         }
-        
         birthdateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
-        
-
     }
     
     func datePickerChanged(sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateStyle = .full
+        formatter.dateStyle = .medium
         birthdateTextField.text = formatter.string(from: sender.date)
-        
+        print(birthdateTextField.text)
     }
-
-
     
     override func nextBtnPressed() {
+        UserDefaults.standard.set(birthdateTextField.text!, forKey: "Birthdate")
         let vc = RegTrainerWhen()
         present(vc, animated: true, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
