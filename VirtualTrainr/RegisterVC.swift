@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: BaseVC {
     
     var topButton = UIButton()
     var topLabel = UILabel()
@@ -27,7 +27,6 @@ class RegisterVC: UIViewController {
     
     let heavyFont = UIFont(name: "SFUIDisplay-Thin", size: 30)
     let subtitleFont = UIFont(name: "SFUIText-LightItalic", size: 15)
-    let standardFont = UIFont(name: "SFUIText-Light", size: 15)
 
     let pageControl = UIPageControl()
     

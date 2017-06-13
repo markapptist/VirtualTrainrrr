@@ -22,6 +22,8 @@ class RegTrainTimesVC: RegTravelVC {
         option2Lbl.text = "2-3 Days a Week"
         option3Lbl.text = "4 or More Days a Week"
         option4Lbl.text = "Once a Week"
+        
+        // missing label for 'To be determined by my Trainer'
     }
     
     override func option1BtnPressed() {

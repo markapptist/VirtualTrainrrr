@@ -64,6 +64,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Graph.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Localize-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,17 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3106EDE4A396D29EE7077A2391922078</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>332F91393FB1DE033D370B4CEDDD5FCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5012204A450AD13C8ABC0B162C03BD7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,12 +152,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7FEAA14E89971698ACA148F7F7202F2</key>
+		<key>9AABB838D6C49387869A3D50CEE58A69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABFEB3A93439DE443981883C3A8C047B</key>
+		<key>A7FEAA14E89971698ACA148F7F7202F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -167,17 +172,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C765BE38970F2F8DC356C5642486E38B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>CB31E62DF803FF697FB3CB6D21B5437E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDD34BABB9AF61D1885C97FF611125BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4866E4F29AF264E2E6E1364538B4623</key>
 		<dict>
 			<key>primary</key>
 			<true/>

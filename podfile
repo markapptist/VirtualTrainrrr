@@ -34,4 +34,6 @@ pod 'Stripe'
 pod 'FSCalendar'
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'Localize-Swift', '~> 1.7'
+pod 'Graph'
+
 end

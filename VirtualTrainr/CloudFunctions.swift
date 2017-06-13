@@ -29,7 +29,7 @@ class CloudFunctions: DataBase {
         case sendPushMessage = "https://us-central1-virtualtrainr-24620.cloudfunctions.net/sendPushMessage"
     }
     
-    func tokboxCall(function: Function, trainer: Trainer, user: User) {
+    func tokboxCall(function: Function, trainer: Trainer, user: Person) {
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         

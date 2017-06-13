@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Trainer: User {
+class Trainer: Person {
     
 }

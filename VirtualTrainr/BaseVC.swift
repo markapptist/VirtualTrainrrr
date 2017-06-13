@@ -11,13 +11,17 @@ import UIKit
 import FirebaseDatabase
 import UserNotifications
 import CoreLocation
+import Graph
 
 class BaseVC: UIViewController, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
+    
+    // graph for core data
+    let graph = Graph()
     
     // add additional set up required variables
     let standardFont = UIFont(name: "SFUIText-Light", size: 15)
     
-    var currentUser: User {
+    var currentUser: Person {
         return AuthService.instance.getSignedInUser()
     }
     

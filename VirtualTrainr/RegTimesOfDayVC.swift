@@ -18,10 +18,14 @@ class RegTimesOfDayVC: RegTravelVC {
         self.pageControl.isHidden = false
         self.titleLbl.text = "What time of day are you available?"
         
+        // follow invision page text
+        
         option1Lbl.text = "Before 9am"
         option2Lbl.text = "9am to noon"
         option3Lbl.text = "Noon to 3pm"
         option4Lbl.text = "3pm - 6pm"
+        
+        // missing label for 'Evening (after 6pm)'
     }
     
     override func option1BtnPressed() {

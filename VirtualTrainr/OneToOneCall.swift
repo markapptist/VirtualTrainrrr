@@ -10,7 +10,7 @@ import Foundation
 
 class OneToOneCall: NSObject {
     
-    var user: User?
+    var user: Person?
     var trainer: Trainer?
     var sessionID: String?
     var token: String?

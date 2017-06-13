@@ -101,6 +101,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMOAuth2/GTMOAuth2.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Graph/Graph.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Localize-Swift/Localize_Swift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Stripe/Stripe.framework"
 fi
@@ -117,6 +118,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMOAuth2/GTMOAuth2.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Graph/Graph.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Localize-Swift/Localize_Swift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Stripe/Stripe.framework"
 fi

@@ -106,7 +106,7 @@
 		666975571ED8B6E40036CEE5 /* CustomUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974ED1ED8B4610036CEE5 /* CustomUISlider.swift */; };
 		666975581ED8B6E40036CEE5 /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974EE1ED8B4610036CEE5 /* MyCalendar.swift */; };
 		666975591ED8B6EE0036CEE5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FC1ED8B4760036CEE5 /* AuthService.swift */; };
-		6669755A1ED8B6EE0036CEE5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FD1ED8B4760036CEE5 /* User.swift */; };
+		6669755A1ED8B6EE0036CEE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FD1ED8B4760036CEE5 /* Person.swift */; };
 		6669755B1ED8B6EE0036CEE5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666974FE1ED8B4760036CEE5 /* DataService.swift */; };
 		6669755C1ED8B75C0036CEE5 /* SF-Compact-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 660D21C91E8C8F8400C11808 /* SF-Compact-Display-Black.otf */; };
 		6669755D1ED8B75C0036CEE5 /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 660D21CA1E8C8F8400C11808 /* SF-Compact-Display-Bold.otf */; };
@@ -245,6 +245,7 @@
 		9276DBA01EEEFAB4003FE23E /* OneToOneCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */; };
 		9276DBA21EEEFAD4003FE23E /* PayPalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */; };
 		9276DBA41EEF1CB5003FE23E /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276DBA31EEF1CB5003FE23E /* StorageService.swift */; };
+		929EF3341EF040AF00DF876B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EF3331EF040AF00DF876B /* Preferences.swift */; };
 		FCDA20F64A2A418D7ED3D72E /* Pods_VirtualTrainr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80704A4918F7B6AB1292470 /* Pods_VirtualTrainr.framework */; };
 /* End PBXBuildFile section */
 
@@ -493,7 +494,7 @@
 		666974ED1ED8B4610036CEE5 /* CustomUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUISlider.swift; sourceTree = "<group>"; };
 		666974EE1ED8B4610036CEE5 /* MyCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
 		666974FC1ED8B4760036CEE5 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		666974FD1ED8B4760036CEE5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		666974FD1ED8B4760036CEE5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		666974FE1ED8B4760036CEE5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		667910E91EDA7F67001E686E /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		667910EB1EDA8276001E686E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/VirtualTrainr-hbbdmajzeuflfqdkstwxkmddsaes/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -534,6 +535,7 @@
 		9276DB9F1EEEFAB4003FE23E /* OneToOneCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneToOneCall.swift; sourceTree = "<group>"; };
 		9276DBA11EEEFAD4003FE23E /* PayPalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalVC.swift; sourceTree = "<group>"; };
 		9276DBA31EEF1CB5003FE23E /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		929EF3331EF040AF00DF876B /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		A32F65EC1C8EEF0CFA150D37 /* Pods-VirtualTrainrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainrUITests/Pods-VirtualTrainrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6F0313CB69733A9E984FCC /* Pods-VirtualTrainr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTrainr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTrainr/Pods-VirtualTrainr.debug.xcconfig"; sourceTree = "<group>"; };
 		CC95F7DD6FBCC0FE07B3507A /* Pods_VirtualTrainrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTrainrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1026,7 +1028,8 @@
 			isa = PBXGroup;
 			children = (
 				666974FC1ED8B4760036CEE5 /* AuthService.swift */,
-				666974FD1ED8B4760036CEE5 /* User.swift */,
+				666974FD1ED8B4760036CEE5 /* Person.swift */,
+				929EF3331EF040AF00DF876B /* Preferences.swift */,
 				9276DB911EEEF468003FE23E /* BaseVC.swift */,
 				9276DB951EEEF5C1003FE23E /* CloudFunctions.swift */,
 				9276DBA31EEF1CB5003FE23E /* StorageService.swift */,
@@ -1469,7 +1472,7 @@
 				666975CE1ED8EE060036CEE5 /* StripeApplePay-Bridging.h in Sources */,
 				666975591ED8B6EE0036CEE5 /* AuthService.swift in Sources */,
 				9276DB921EEEF468003FE23E /* BaseVC.swift in Sources */,
-				6669755A1ED8B6EE0036CEE5 /* User.swift in Sources */,
+				6669755A1ED8B6EE0036CEE5 /* Person.swift in Sources */,
 				6669755B1ED8B6EE0036CEE5 /* DataService.swift in Sources */,
 				9276DB9C1EEEF9E7003FE23E /* LocalNotification.swift in Sources */,
 				6669754D1ED8B6E40036CEE5 /* ItemButton.swift in Sources */,
@@ -1494,6 +1497,7 @@
 				6669753D1ED8B6530036CEE5 /* RegStartVC.swift in Sources */,
 				6669753E1ED8B6530036CEE5 /* RegGenderVC.swift in Sources */,
 				6669753F1ED8B6530036CEE5 /* RegisterTrainerVC.swift in Sources */,
+				929EF3341EF040AF00DF876B /* Preferences.swift in Sources */,
 				666975401ED8B6530036CEE5 /* RegNameVC.swift in Sources */,
 				666975411ED8B6530036CEE5 /* RegFindTrainerVC.swift in Sources */,
 				666975421ED8B6530036CEE5 /* RegTravelVC.swift in Sources */,
