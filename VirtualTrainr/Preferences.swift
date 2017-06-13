@@ -94,12 +94,14 @@ enum Activity: String {
         switch self {
         case .aerobics:
             return "Aerobics"
+        case .weightLoss:
+            return "Weight Loss"
+        case .healthier:
+            return "Become Healthier"
         case .mentalHealth:
             return "Mental Health"
         case .endurance:
             return "Endurance"
-        case .weightLoss:
-            return "Weight Loss"
         case .strengthTraining:
             return "Strength and body building"
         case .trimmed:
@@ -108,8 +110,8 @@ enum Activity: String {
             return "Build Muscle Strength"
         case .healthier:
             return "Become Healthier"
-        }
     }
+}
 }
 
 struct Preferences {

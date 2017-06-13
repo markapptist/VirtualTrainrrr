@@ -148,6 +148,7 @@ class AuthService: NSObject {
         }
     }
     
+    /*
     func getSignedInUser() -> Person {
         if let user = Auth.auth().currentUser {
             if user.displayName != nil {
@@ -166,6 +167,7 @@ class AuthService: NSObject {
             return noUserSignedIn
         }
     }
+    */
     
     // sign out
     func performSignOut() {

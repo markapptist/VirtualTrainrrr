@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
+import Graph
 
 class RegStartVC: RegisterVC {
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +32,12 @@ class RegStartVC: RegisterVC {
         super.viewDidAppear(false)
         
         bottomButton.addTarget(self, action: #selector(self.bottomBtnPressed), for: .touchUpInside)
-
     }
 
 
     override func topBtnPressed() {
-        let vc = RegFitnessGoalsVC()
-        self.present(vc, animated: true, completion: nil)
+        let fitnessGoalsVC = RegFitnessGoalsVC()
+        self.present(fitnessGoalsVC, animated: true, completion: nil)
     }
     
     override func bottomBtnPressed() {

@@ -52,13 +52,13 @@ class NewMessageVC: BaseVC {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        recipient?.text = trainer?.email
+//        recipient?.text = trainer?.email
     }
     
     func sendBtnPressed() {
         if messageBody?.text != nil {
-            let userUID = self.currentUser.uid
-            let email = self.currentUser.email
+//            let userUID = self.currentUser.uid
+//            let email = self.currentUser.email
             //            DataService.instance.sendMessage(recipientUID: (trainer?.uid)!, recipientEmail: (trainer?.email)!, senderUID: userUID, senderEmail: email, messageBody: (messageBody?.text)!)
         }
         else {

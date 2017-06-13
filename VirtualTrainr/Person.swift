@@ -10,20 +10,17 @@ import UIKit
 import CoreLocation
 
 enum SocialProfiles {
-    case facebook
-    case googlePlus
-    case linkedIn
+    case facebook, googlePlus, linkedIn
 }
 
 enum Gender: String {
-    case male
-    case female
+    case male, female
     
     func genderString() -> String {
         switch self {
-        case male:
+        case .male:
             return "Male"
-        case female:
+        case .female:
             return "Female"
         }
     }
@@ -47,6 +44,41 @@ class Person: NSObject {
     private var notifications: Notification? = nil
     private var canNotify: Bool? = nil
     
+    func setUserID(id: String) {
+        self.id = id
+    }
     
+    func setName(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    func setUserAddress(location: CLLocationCoordinate2D) {
+        self.address = location
+    }
+    
+    func setCurrentLocation(location: CLLocationCoordinate2D) {
+        self.currentLocation = location
+    }
+    
+    func setGender(gender: Gender) {
+        self.gender = gender
+    }
+    
+    func setBirthdate(date: Date) {
+        self.birthdate = date
+    }
+    
+    func setAboutMe(text: String) {
+        self.aboutMe = text
+    }
+    
+    func setPreferences() {
+        
+    }
+    
+    func setCanNotify(value: Bool) {
+        self.canNotify = value
+    }
 }
 
