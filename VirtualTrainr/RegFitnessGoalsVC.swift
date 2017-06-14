@@ -14,7 +14,8 @@ class RegFitnessGoalsVC: RegTravelVC {
     let option5Btn = UIButton()
     let option5Lbl = UILabel()
     
-    var goals: Array<FitnessGoals> = []
+    var selections: Dictionary<Int, Activity> = [:]
+//    var goals: Array<FitnessGoals> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class RegFitnessGoalsVC: RegTravelVC {
         
         option1Lbl.text = Activity.weightLoss.actName()
         option2Lbl.text = Activity.trimmed.actName()
-        option3Lbl.text = Activity.strength.actName()
+        option3Lbl.text = Activity.muscle.actName()
         option4Lbl.text = Activity.healthier.actName()
         
         self.view.addSubview(option5Btn)
@@ -46,7 +47,7 @@ class RegFitnessGoalsVC: RegTravelVC {
         option5Btn.addTarget(self, action: #selector(option5BtnPressed), for: .touchUpInside)
         
         self.view.addSubview(option5Lbl)
-        option5Lbl.text = "Increase Endurance and Aerobic Fitness"
+        option5Lbl.text = Activity.endurance.actName()
         option5Lbl.font = standardFont
         option5Lbl.textAlignment = .center
         option5Lbl.textColor = UIColor.white
@@ -62,11 +63,11 @@ class RegFitnessGoalsVC: RegTravelVC {
             option1Btn.isSelected = true
             nextButton.isHidden = false
             option1Btn.alpha = 0.7
-            goals?.setValue(option1Lbl.text!, forKey: "1")
+            selections.updateValue(.weightLoss, forKey: 1)
         }   else {
             option1Btn.isSelected = false
             option1Btn.alpha = 0.2
-            goals?.removeObject(forKey: "1")
+            selections.removeValue(forKey: 1)
         }
         self.checkNoneSelected()
     }
@@ -76,11 +77,11 @@ class RegFitnessGoalsVC: RegTravelVC {
             option2Btn.isSelected = true
             nextButton.isHidden = false
             option2Btn.alpha = 0.7
-            goals?.setValue(option2Lbl.text!, forKey: "2")
+            selections.updateValue(.trimmed, forKey: 2)
         }   else {
             option2Btn.isSelected = false
             option2Btn.alpha = 0.2
-            goals?.removeObject(forKey: "2")
+            selections.removeValue(forKey: 2)
         }
         self.checkNoneSelected()
     }
@@ -90,11 +91,11 @@ class RegFitnessGoalsVC: RegTravelVC {
             option3Btn.isSelected = true
             nextButton.isHidden = false
             option3Btn.alpha = 0.7
-            goals?.setValue(option3Lbl.text!, forKey: "3")
+            selections.updateValue(.muscle, forKey: 3)
         }   else {
             option3Btn.isSelected = false
             option3Btn.alpha = 0.2
-            goals?.removeObject(forKey: "3")
+            selections.removeValue(forKey: 3)
         }
         self.checkNoneSelected()
     }
@@ -104,11 +105,11 @@ class RegFitnessGoalsVC: RegTravelVC {
             option4Btn.isSelected = true
             nextButton.isHidden = false
             option4Btn.alpha = 0.7
-            goals?.setValue(option4Lbl.text!, forKey: "4")
+            selections.updateValue(.healthier, forKey: 4)
         }   else {
             option4Btn.isSelected = false
             option4Btn.alpha = 0.2
-            goals?.removeObject(forKey: "4")
+            selections.removeValue(forKey: 4)
         }
         self.checkNoneSelected()
     }
@@ -118,12 +119,12 @@ class RegFitnessGoalsVC: RegTravelVC {
             option5Btn.isSelected = true
             nextButton.isHidden = false
             option5Btn.alpha = 0.7
-            goals?.setValue(option5Lbl.text!, forKey: "5")
+            selections.updateValue(.endurance, forKey: 5)
             
         }   else {
             option5Btn.isSelected = false
             option5Btn.alpha = 0.2
-            goals?.removeObject(forKey: "5")
+            selections.removeValue(forKey: 5)
         }
         self.checkNoneSelected()
     }
@@ -136,11 +137,15 @@ class RegFitnessGoalsVC: RegTravelVC {
     }
     
     override func nextBtnPressed() {
-        // create entity of client in graph
-        let client = Entity(type: "Client")
-        client["fitnessGoals"] =
-        
-        UserDefaults.standard.set(goals!, forKey: "FitnessGoals")
+        // object to store in memory
+        var goals: Array = [Activity]()
+        for activity in selections.values {
+            goals.append(activity.hashValue)
+            print(activity.hashValue)
+        }
+        print(goals)
+        // store
+        UserDefaults.standard.set(goals, forKey: "activity")
         let trainTimes = RegTrainTimesVC()
         self.present(trainTimes, animated: true, completion: nil)
     }

@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         UserDefaults.standard.set(false, forKey: "googleCheck")
         UserDefaults.standard.set(false, forKey: "linkedInCheck")
         
+        UserDefaults.resetStandardUserDefaults()
+        
         let entryScreen = EntryScreen()
         
         let dashboard = AppContainerViewController()

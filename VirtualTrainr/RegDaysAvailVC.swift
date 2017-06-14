@@ -15,13 +15,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
     
     let option6Lbl = UILabel()
     let option7Lbl = UILabel()
-    
     var daysAvail: NSMutableDictionary? = [:]
+//    var selections: Dictionary<Int, Activity> = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         
         self.pageControl.isHidden = false
         self.titleLbl.text = "Which days are you available?"

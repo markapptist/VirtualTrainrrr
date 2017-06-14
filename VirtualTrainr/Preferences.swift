@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Days: String {
+enum Days: Int {
     case monday, tuesday, wednesday, thursday, friday, saturday, sunday
     
     func day() -> String {
@@ -32,7 +32,7 @@ enum Days: String {
     }
 }
 
-enum TimesFree: String {
+enum TimesFree: Int {
     case morning, lateMorning, afternoon, lateAfternoon, evening
     
     func time() -> String {
@@ -51,7 +51,7 @@ enum TimesFree: String {
     }
 }
 
-enum TravelRange: String {
+enum TravelRange: Int {
     case here, fiveToNineteenKM, twentyOrMore, oneToOne
     
     func range() -> String {
@@ -68,7 +68,7 @@ enum TravelRange: String {
     }
 }
 
-enum HowOften: String {
+enum HowOften: Int {
     case daily, twoToThreeDays, fourOrMore, onceAWeek, tbd
     
     func frequency() -> String {
@@ -87,31 +87,27 @@ enum HowOften: String {
     }
 }
 
-enum Activity: String {
-    case aerobics, mentalHealth, endurance, weightLoss, strengthTraining, trimmed, strength, healthier
+enum Activity {
+    case weightLoss, trimmed, muscle, healthier, endurance, bodyBuilding, mental
     
     func actName() -> String {
         switch self {
-        case .aerobics:
-            return "Aerobics"
         case .weightLoss:
             return "Weight Loss"
-        case .healthier:
-            return "Become Healthier"
-        case .mentalHealth:
-            return "Mental Health"
-        case .endurance:
-            return "Endurance"
-        case .strengthTraining:
-            return "Strength and body building"
         case .trimmed:
             return "Trimmed and Toned"
-        case .strength:
+        case .muscle:
             return "Build Muscle Strength"
         case .healthier:
             return "Become Healthier"
+        case .endurance:
+            return "Increase Endurance and Aerobic Fitness"
+        case .bodyBuilding:
+            return "Body Building"
+        case .mental:
+            return "Hollistic Mind & Body Health"
+        }
     }
-}
 }
 
 struct Preferences {
@@ -120,4 +116,5 @@ struct Preferences {
     var travelRange: Array<TravelRange>? = nil
     var howOften: Array<HowOften>? = nil
     var activityPreferences: Array<Activity>? = nil
+    
 }

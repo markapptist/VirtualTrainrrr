@@ -10,7 +10,7 @@ import UIKit
 
 class RegTrainTimesVC: RegTravelVC {
     
-    var times: NSMutableDictionary? = [:]
+    var selections: Dictionary<Int, HowOften> = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,20 @@ class RegTrainTimesVC: RegTravelVC {
         self.pageControl.isHidden = false
         self.titleLbl.text = "How often would you like to train?"
         
-        option1Lbl.text = Days.monday.day()
-        option2Lbl.text = "2-3 Days a Week"
-        option3Lbl.text = "4 or More Days a Week"
-        option4Lbl.text = "Once a Week"
+        option1Lbl.text = HowOften.daily.frequency()
+        option2Lbl.text = HowOften.twoToThreeDays.frequency()
+        option3Lbl.text = HowOften.fourOrMore.frequency()
+        option4Lbl.text = HowOften.onceAWeek.frequency()
         
         // missing label for 'To be determined by my Trainer'
+    
+        print(UserDefaults.standard.array(forKey: "activity"))
+        let array = UserDefaults.standard.array(forKey: "activity") as! [Activity]
+        for activity in array {
+            let activityCase = activity
+            print(activityCase)
+        }
+ 
     }
     
     override func option1BtnPressed() {
@@ -31,12 +39,12 @@ class RegTrainTimesVC: RegTravelVC {
             option1Btn.isSelected = true
             nextButton.isHidden = false
             option1Btn.alpha = 0.7
-            times?.setValue(option1Lbl.text!, forKey: "1")
+            selections.updateValue(.daily, forKey: 1)
             
         }   else {
             option1Btn.isSelected = false
             option1Btn.alpha = 0.2
-            times?.removeObject(forKey: "1")
+            selections.removeValue(forKey: 1)
         }
         self.checkNoneSelected()
     }
@@ -46,12 +54,12 @@ class RegTrainTimesVC: RegTravelVC {
             option2Btn.isSelected = true
             nextButton.isHidden = false
             option2Btn.alpha = 0.7
-            times?.setValue(option2Lbl.text!, forKey: "2")
+            selections.updateValue(.twoToThreeDays, forKey: 2)
             
         }   else {
             option2Btn.isSelected = false
             option2Btn.alpha = 0.2
-            times?.removeObject(forKey: "2")
+            selections.removeValue(forKey: 2)
         }
         self.checkNoneSelected()
     }
@@ -61,12 +69,12 @@ class RegTrainTimesVC: RegTravelVC {
             option3Btn.isSelected = true
             nextButton.isHidden = false
             option3Btn.alpha = 0.7
-            times?.setValue(option3Lbl.text!, forKey: "3")
+            selections.updateValue(.fourOrMore, forKey: 3)
             
         }   else {
             option3Btn.isSelected = false
             option3Btn.alpha = 0.2
-            times?.removeObject(forKey: "3")
+            selections.removeValue(forKey: 3)
         }
         self.checkNoneSelected()
     }
@@ -76,18 +84,22 @@ class RegTrainTimesVC: RegTravelVC {
             option4Btn.isSelected = true
             nextButton.isHidden = false
             option4Btn.alpha = 0.7
-            times?.setValue(option4Lbl.text!, forKey: "4")
+            selections.updateValue(.onceAWeek, forKey: 4)
             
         }   else {
             option4Btn.isSelected = false
             option4Btn.alpha = 0.2
-            times?.removeObject(forKey: "4")
+            selections.removeValue(forKey: 4)
         }
         self.checkNoneSelected()
     }
     
     override func nextBtnPressed() {
-        UserDefaults.standard.set(times, forKey: "TrainingTimes")
+        var times: Array = [HowOften]()
+        for time in selections.values {
+            times.append(time)
+        }
+        UserDefaults.standard.set(times, forKey: "HowOften")
         let vc = RegTimesOfDayVC()
         present(vc, animated: true, completion: nil)
     }
