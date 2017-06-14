@@ -24,14 +24,6 @@ class RegTrainTimesVC: RegTravelVC {
         option4Lbl.text = HowOften.onceAWeek.frequency()
         
         // missing label for 'To be determined by my Trainer'
-    
-        print(UserDefaults.standard.array(forKey: "activity"))
-        let array = UserDefaults.standard.array(forKey: "activity") as! [Activity]
-        for activity in array {
-            let activityCase = activity
-            print(activityCase)
-        }
- 
     }
     
     override func option1BtnPressed() {
@@ -95,11 +87,11 @@ class RegTrainTimesVC: RegTravelVC {
     }
     
     override func nextBtnPressed() {
-        var times: Array = [HowOften]()
+        var frequency: Array = [Int]()
         for time in selections.values {
-            times.append(time)
+            frequency.append(time.rawValue)
         }
-        UserDefaults.standard.set(times, forKey: "HowOften")
+        self.userDefaults.set(frequency, forKey: UserDefaultItems.howOften.nameDefaults())
         let vc = RegTimesOfDayVC()
         present(vc, animated: true, completion: nil)
     }

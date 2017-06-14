@@ -15,8 +15,8 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
     
     let option6Lbl = UILabel()
     let option7Lbl = UILabel()
-    var daysAvail: NSMutableDictionary? = [:]
-//    var selections: Dictionary<Int, Activity> = [:]
+    
+    var selections: Dictionary<Int, Days> = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
         self.pageControl.isHidden = false
         self.titleLbl.text = "Which days are you available?"
         
-        option1Lbl.text = "Monday"
-        option2Lbl.text = "Tuesday"
-        option3Lbl.text = "Wednesday"
-        option4Lbl.text = "Thursday"
-        option5Lbl.text = "Friday"
+        option1Lbl.text = Days.monday.day()
+        option2Lbl.text = Days.tuesday.day()
+        option3Lbl.text = Days.wednesday.day()
+        option4Lbl.text = Days.thursday.day()
+        option5Lbl.text = Days.friday.day()
         
         option1Btn.topAnchor.constraint(equalTo: titleLbl.bottomAnchor, constant: -5).isActive = true
         
@@ -51,7 +51,7 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
         option6Btn.addTarget(self, action: #selector(option6BtnPressed), for: .touchUpInside)
         
         self.view.addSubview(option6Lbl)
-        option6Lbl.text = "Saturday"
+        option6Lbl.text = Days.saturday.day()
         option6Lbl.font = standardFont
         option6Lbl.textAlignment = .center
         option6Lbl.textColor = UIColor.white
@@ -63,7 +63,7 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
         
         self.view.addSubview(option7Btn)
         
-        option7Btn.setTitle("Sunday", for: .normal)
+//        option7Btn.setTitle("Sunday", for: .normal)
         option7Btn.backgroundColor = UIColor.white
         option7Btn.alpha = 0.2
         option7Btn.layer.borderWidth = 1
@@ -81,7 +81,7 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
         option7Btn.addTarget(self, action: #selector(option7BtnPressed), for: .touchUpInside)
         
         self.view.addSubview(option7Lbl)
-        option7Lbl.text = "Sunday"
+        option7Lbl.text = Days.sunday.day()
         option7Lbl.font = standardFont
         option7Lbl.textAlignment = .center
         option7Lbl.textColor = UIColor.white
@@ -99,11 +99,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option1Btn.isSelected = true
             nextButton.isHidden = false
             option1Btn.alpha = 0.7
-            daysAvail?.setValue(option1Lbl.text!, forKey: "1")
+            selections.updateValue(.monday, forKey: 1)
         }   else {
             option1Btn.isSelected = false
             option1Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "1")
+            selections.removeValue(forKey: 1)
         }
         self.checkNoneSelected()
     }
@@ -113,11 +113,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option2Btn.isSelected = true
             nextButton.isHidden = false
             option2Btn.alpha = 0.7
-            daysAvail?.setValue(option2Lbl.text!, forKey: "2")
+            selections.updateValue(.tuesday, forKey: 2)
         }   else {
             option2Btn.isSelected = false
             option2Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "2")
+            selections.removeObject(forKey: 2)
         }
         self.checkNoneSelected()
     }
@@ -127,11 +127,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option3Btn.isSelected = true
             nextButton.isHidden = false
             option3Btn.alpha = 0.7
-            daysAvail?.setValue(option3Lbl.text!, forKey: "3")
+            selections.updateValue(.wednesday, forKey: 3)
         }   else {
             option3Btn.isSelected = false
             option3Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "3")
+            selections.removeValue(forKey: 3)
         }
         self.checkNoneSelected()
     }
@@ -141,11 +141,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option4Btn.isSelected = true
             nextButton.isHidden = false
             option4Btn.alpha = 0.7
-            daysAvail?.setValue(option4Lbl.text!, forKey: "4")
+            selections.updateValue(.thursday, forKey: 4)
         }   else {
             option4Btn.isSelected = false
             option4Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "4")
+            selections.removeValue(forKey: 4)
         }
         self.checkNoneSelected()
     }
@@ -155,12 +155,12 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option5Btn.isSelected = true
             nextButton.isHidden = false
             option5Btn.alpha = 0.7
-            daysAvail?.setValue(option5Lbl.text!, forKey: "5")
+            selections.updateValue(.friday, forKey: 5)
             
         }   else {
             option5Btn.isSelected = false
             option5Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "5")
+            selections.removeValue(forKey: 5)
         }
         self.checkNoneSelected()
     }
@@ -170,11 +170,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option6Btn.isSelected = true
             nextButton.isHidden = false
             option6Btn.alpha = 0.7
-            daysAvail?.setValue(option6Lbl.text!, forKey: "6")
+            selections.updateValue(.saturday, forKey: 6)
         }   else {
             option6Btn.isSelected = false
             option6Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "6")
+            selections.removeValue(forKey: 6)
         }
         self.checkNoneSelected()
     }
@@ -184,11 +184,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
             option7Btn.isSelected = true
             nextButton.isHidden = false
             option7Btn.alpha = 0.7
-            daysAvail?.setValue(option7Lbl.text!, forKey: "7")
+            selections.updateValue(.sunday, forKey: 7)
         }   else {
             option7Btn.isSelected = false
             option7Btn.alpha = 0.2
-            daysAvail?.removeObject(forKey: "7")
+            selections.removeValue(forKey: 7)
         }
         self.checkNoneSelected()
     }
@@ -201,7 +201,11 @@ class RegDaysAvailVC: RegFitnessGoalsVC {
     }
     
     override func nextBtnPressed() {
-        UserDefaults.standard.set(daysAvail, forKey: "DaysAvail")
+        var days: Array = [Int]()
+        for day in selections.values {
+            days.append(day.rawValue)
+        }
+        self.userDefaults.set(days, forKey: UserDefaultItems.days.nameDefaults())
         let birthdate = RegBirthdateVC()
         self.present(birthdate, animated: true, completion: nil)
     }

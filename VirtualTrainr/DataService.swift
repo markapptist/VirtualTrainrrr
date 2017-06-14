@@ -12,11 +12,20 @@ protocol OfflineDelegate {
     func didGoOffline(email: String)
 }
 
-class DataService: DataBase {
-    enum Preferences {
-        case seeker
-        case trainer
+enum Account: Int {
+    case client, trainer
+    
+    func accountValue() -> String {
+        switch self {
+        case .client:
+            return "client"
+        default:
+            return "trainer"
+        }
     }
+}
+
+class DataService: DataBase {
     
     enum VerifiedAccount {
         case email
@@ -35,7 +44,7 @@ class DataService: DataBase {
     }
     
     // MARK: - User
-    func createUser(uid: String, email: String, preferences: Preferences) {
+    func createUser(uid: String, email: String, account: Account) {
         var userPreferences = self.createPreferenceProfile(preferences: preferences)
         if preferences == .seeker {
             let seekerProfileID = self.createUniqueID()
@@ -75,11 +84,13 @@ class DataService: DataBase {
     }
     
     // MARK: - User Preferences
-    func createPreferenceProfile(preferences: Preferences) -> Dictionary<String, Any>? {
+    func createPreferenceProfile(account: Account) -> Dictionary<String, Any>? {
         var userPreferences: [String:Any] = [:]
         if preferences == .seeker {
-            if let goals = UserDefaults.standard.object(forKey: "FitnessGoals") as? NSDictionary {
-                let goalsPicked = goals.allValues as! [String]
+            if let activities = UserDefaults.standard.object(forKey: UserDefaultItems.activity) as! [Int] {
+                for activity in activities {
+                    let activityCase = activity
+                }
                 let created = self.buildProfile(part: "FitnessGoals", array: goalsPicked)
                 userPreferences.updateValue(created!, forKey: "FitnessGoals")
             }

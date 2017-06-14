@@ -90,7 +90,11 @@ class RegTimesOfDayVC: RegTravelVC {
     }
     
     override func nextBtnPressed() {
-//        UserDefaults.standard.set(timesAvail, forKey: "TimesAvail")
+        var times: Array = [Int]()
+        for time in selections.values {
+            times.append(time.rawValue)
+        }
+        self.userDefaults.set(times, forKey: UserDefaultItems.timesFree.nameDefaults())
         let vc = RegDaysAvailVC()
         present(vc, animated: true, completion: nil)
     }

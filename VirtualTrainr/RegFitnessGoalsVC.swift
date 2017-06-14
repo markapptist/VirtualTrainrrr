@@ -15,7 +15,6 @@ class RegFitnessGoalsVC: RegTravelVC {
     let option5Lbl = UILabel()
     
     var selections: Dictionary<Int, Activity> = [:]
-//    var goals: Array<FitnessGoals> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,14 +137,12 @@ class RegFitnessGoalsVC: RegTravelVC {
     
     override func nextBtnPressed() {
         // object to store in memory
-        var goals: Array = [Activity]()
+        var goals: Array = [Int]()
         for activity in selections.values {
-            goals.append(activity.hashValue)
-            print(activity.hashValue)
+            goals.append(activity.rawValue)
         }
-        print(goals)
         // store
-        UserDefaults.standard.set(goals, forKey: "activity")
+        UserDefaults.standard.set(goals, forKey: UserDefaultItems.activity.nameDefaults())
         let trainTimes = RegTrainTimesVC()
         self.present(trainTimes, animated: true, completion: nil)
     }

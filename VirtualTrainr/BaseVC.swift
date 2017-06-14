@@ -11,17 +11,34 @@ import UIKit
 import FirebaseDatabase
 import UserNotifications
 import CoreLocation
-import Graph
+
+enum UserDefaultItems {
+    case activity, howOften, travelRange, timesFree, days
+    
+    func nameDefaults() -> String {
+        switch self {
+        case .activity:
+            return "Activity"
+        case .howOften:
+            return "HowOften"
+        case .travelRange:
+            return "TravelRange"
+        case .timesFree:
+            return "TimesFree"
+        case .days:
+            return "Days"
+        }
+    }
+}
 
 class BaseVC: UIViewController, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
+    
+    let userDefaults = UserDefaults.standard
     
     // images
     let backBtnImage = UIImage(named: "back_icon")
     let vtImage = UIImage(named: "vt_icon")
     let backgroundImage = UIImage(named: "intro_background")
-    
-    // graph for core data
-    let graph = Graph()
     
     // fonts
     let standardFont = UIFont(name: "SFUIText-Light", size: 15)

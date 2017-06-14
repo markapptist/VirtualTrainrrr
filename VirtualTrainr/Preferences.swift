@@ -87,7 +87,7 @@ enum HowOften: Int {
     }
 }
 
-enum Activity {
+enum Activity: Int {
     case weightLoss, trimmed, muscle, healthier, endurance, bodyBuilding, mental
     
     func actName() -> String {
